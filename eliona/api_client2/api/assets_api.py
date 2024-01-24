@@ -2370,6 +2370,7 @@ class AssetsApi:
         asset_id: Annotated[Optional[StrictInt], Field(description="Filter for a specific asset id")] = None,
         asset_type_name: Annotated[Optional[StrictStr], Field(description="Filter the name of the asset type")] = None,
         tag: Annotated[Optional[StrictStr], Field(description="Filter the tag")] = None,
+        expansions: Annotated[Optional[List[StrictStr]], Field(description="List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows 'ObjectName.fieldName'.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -2393,6 +2394,8 @@ class AssetsApi:
         :type asset_type_name: str
         :param tag: Filter the tag
         :type tag: str
+        :param expansions: List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows 'ObjectName.fieldName'.
+        :type expansions: List[str]
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -2419,6 +2422,7 @@ class AssetsApi:
             asset_id=asset_id,
             asset_type_name=asset_type_name,
             tag=tag,
+            expansions=expansions,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -2445,6 +2449,7 @@ class AssetsApi:
         asset_id: Annotated[Optional[StrictInt], Field(description="Filter for a specific asset id")] = None,
         asset_type_name: Annotated[Optional[StrictStr], Field(description="Filter the name of the asset type")] = None,
         tag: Annotated[Optional[StrictStr], Field(description="Filter the tag")] = None,
+        expansions: Annotated[Optional[List[StrictStr]], Field(description="List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows 'ObjectName.fieldName'.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -2468,6 +2473,8 @@ class AssetsApi:
         :type asset_type_name: str
         :param tag: Filter the tag
         :type tag: str
+        :param expansions: List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows 'ObjectName.fieldName'.
+        :type expansions: List[str]
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -2494,6 +2501,7 @@ class AssetsApi:
             asset_id=asset_id,
             asset_type_name=asset_type_name,
             tag=tag,
+            expansions=expansions,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -2520,6 +2528,7 @@ class AssetsApi:
         asset_id: Annotated[Optional[StrictInt], Field(description="Filter for a specific asset id")] = None,
         asset_type_name: Annotated[Optional[StrictStr], Field(description="Filter the name of the asset type")] = None,
         tag: Annotated[Optional[StrictStr], Field(description="Filter the tag")] = None,
+        expansions: Annotated[Optional[List[StrictStr]], Field(description="List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows 'ObjectName.fieldName'.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -2543,6 +2552,8 @@ class AssetsApi:
         :type asset_type_name: str
         :param tag: Filter the tag
         :type tag: str
+        :param expansions: List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows 'ObjectName.fieldName'.
+        :type expansions: List[str]
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -2569,6 +2580,7 @@ class AssetsApi:
             asset_id=asset_id,
             asset_type_name=asset_type_name,
             tag=tag,
+            expansions=expansions,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -2590,6 +2602,7 @@ class AssetsApi:
         asset_id,
         asset_type_name,
         tag,
+        expansions,
         _request_auth,
         _content_type,
         _headers,
@@ -2599,6 +2612,7 @@ class AssetsApi:
         _host = None
 
         _collection_formats: Dict[str, str] = {
+            'expansions': 'csv',
         }
 
         _path_params: Dict[str, str] = {}
@@ -2621,6 +2635,10 @@ class AssetsApi:
         if tag is not None:
             
             _query_params.append(('tag', tag))
+            
+        if expansions is not None:
+            
+            _query_params.append(('expansions', expansions))
             
         # process the header parameters
         # process the form parameters

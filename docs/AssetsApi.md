@@ -735,7 +735,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listen_asset**
-> AssetListen listen_asset(asset_id=asset_id, asset_type_name=asset_type_name, tag=tag)
+> AssetListen listen_asset(asset_id=asset_id, asset_type_name=asset_type_name, tag=tag, expansions=expansions)
 
 WebSocket connection for asset changes
 
@@ -783,10 +783,11 @@ with eliona.api_client2.ApiClient(configuration) as api_client:
     asset_id = 4711 # int | Filter for a specific asset id (optional)
     asset_type_name = 'weather_location' # str | Filter the name of the asset type (optional)
     tag = 'building' # str | Filter the tag (optional)
+    expansions = ['expansions_example'] # List[str] | List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows 'ObjectName.fieldName'. (optional)
 
     try:
         # WebSocket connection for asset changes
-        api_response = api_instance.listen_asset(asset_id=asset_id, asset_type_name=asset_type_name, tag=tag)
+        api_response = api_instance.listen_asset(asset_id=asset_id, asset_type_name=asset_type_name, tag=tag, expansions=expansions)
         print("The response of AssetsApi->listen_asset:\n")
         pprint(api_response)
     except Exception as e:
@@ -803,6 +804,7 @@ Name | Type | Description  | Notes
  **asset_id** | **int**| Filter for a specific asset id | [optional] 
  **asset_type_name** | **str**| Filter the name of the asset type | [optional] 
  **tag** | **str**| Filter the tag | [optional] 
+ **expansions** | [**List[str]**](str.md)| List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows &#39;ObjectName.fieldName&#39;. | [optional] 
 
 ### Return type
 
