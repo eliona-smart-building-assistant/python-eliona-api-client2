@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**get_asset_by_id**](AssetsApi.md#get_asset_by_id) | **GET** /assets/{asset-id} | Information about an asset
 [**get_assets**](AssetsApi.md#get_assets) | **GET** /assets | Information about assets
 [**get_attribute_display**](AssetsApi.md#get_attribute_display) | **GET** /attribute-display | How attributes are displayed
+[**listen_assets**](AssetsApi.md#listen_assets) | **GET** /asset-listener | WebSocket connection for asset changes
 [**post_asset**](AssetsApi.md#post_asset) | **POST** /assets | Create an asset
 [**post_bulk_assets**](AssetsApi.md#post_bulk_assets) | **POST** /assets-bulk | Create a list of assets
 [**put_asset**](AssetsApi.md#put_asset) | **PUT** /assets | Create or update an asset
@@ -730,6 +731,97 @@ This endpoint does not need any parameter.
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Successfully returned display information for attributes |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **listen_assets**
+> AssetListen listen_assets(asset_id=asset_id, asset_type_name=asset_type_name, tag=tag)
+
+WebSocket connection for asset changes
+
+Open a WebSocket connection to get informed when asset is created, updated or deleted.
+
+### Example
+
+* Api Key Authentication (ApiKeyAuth):
+* Bearer (JWT) Authentication (BearerAuth):
+
+```python
+import time
+import os
+import eliona.api_client2
+from eliona.api_client2.models.asset_listen import AssetListen
+from eliona.api_client2.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://name.eliona.io/api/v2
+# See configuration.py for a list of all supported configuration parameters.
+configuration = eliona.api_client2.Configuration(
+    host = "https://name.eliona.io/api/v2"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+
+# Configure Bearer authorization (JWT): BearerAuth
+configuration = eliona.api_client2.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with eliona.api_client2.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = eliona.api_client2.AssetsApi(api_client)
+    asset_id = 4711 # int | Filter for a specific asset id (optional)
+    asset_type_name = 'weather_location' # str | Filter the name of the asset type (optional)
+    tag = 'building' # str | Filter the tag (optional)
+
+    try:
+        # WebSocket connection for asset changes
+        api_response = api_instance.listen_assets(asset_id=asset_id, asset_type_name=asset_type_name, tag=tag)
+        print("The response of AssetsApi->listen_assets:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling AssetsApi->listen_assets: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **asset_id** | **int**| Filter for a specific asset id | [optional] 
+ **asset_type_name** | **str**| Filter the name of the asset type | [optional] 
+ **tag** | **str**| Filter the tag | [optional] 
+
+### Return type
+
+[**AssetListen**](AssetListen.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth), [BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successfully opened a connection to asset WebSocket |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

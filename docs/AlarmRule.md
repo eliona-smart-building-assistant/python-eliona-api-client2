@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 **urldoc** | **str** | The url describing the alarm | [optional] 
 **notify_on** | **str** | Notification | [optional] 
 **dont_mask** | **bool** | Do not mask | [optional] [default to False]
-**check_type** | **str** | Check type | [optional] [default to 'limits']
+**check_type** | **str** | Check type | [optional] 
 **asset_info** | [**Asset**](Asset.md) |  | [optional] 
 
 ## Example

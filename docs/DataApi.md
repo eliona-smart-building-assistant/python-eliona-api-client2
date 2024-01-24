@@ -298,7 +298,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listen_data**
-> Data listen_data(asset_id=asset_id, data_subtype=data_subtype)
+> DataListen listen_data(asset_id=asset_id, data_subtype=data_subtype)
 
 WebSocket connection for asset data changes
 
@@ -313,7 +313,7 @@ Open a WebSocket connection to get informed when new asset data is written or an
 import time
 import os
 import eliona.api_client2
-from eliona.api_client2.models.data import Data
+from eliona.api_client2.models.data_listen import DataListen
 from eliona.api_client2.rest import ApiException
 from pprint import pprint
 
@@ -367,7 +367,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Data**](Data.md)
+[**DataListen**](DataListen.md)
 
 ### Authorization
 

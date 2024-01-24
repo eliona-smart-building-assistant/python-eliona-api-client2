@@ -460,7 +460,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listen_alarm**
-> Alarm listen_alarm()
+> AlarmListen listen_alarm()
 
 WebSocket connection for alarm changes
 
@@ -475,7 +475,7 @@ Open a WebSocket connection to get informed when new alarm data is written or an
 import time
 import os
 import eliona.api_client2
-from eliona.api_client2.models.alarm import Alarm
+from eliona.api_client2.models.alarm_listen import AlarmListen
 from eliona.api_client2.rest import ApiException
 from pprint import pprint
 
@@ -523,7 +523,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Alarm**](Alarm.md)
+[**AlarmListen**](AlarmListen.md)
 
 ### Authorization
 

@@ -6,7 +6,7 @@ A notification
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**user** | **str** | E-Mail address of the Eliona user | 
+**user** | **str** | E-Mail address or internal ID of the Eliona user | 
 **project_id** | **str** | ID of the project the notification should appear | [optional] 
 **message** | [**Translation**](Translation.md) |  | 
 
