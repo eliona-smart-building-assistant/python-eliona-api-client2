@@ -157,7 +157,7 @@ Class | Method | HTTP request | Description
 *AssetsApi* | [**get_asset_by_id**](docs/AssetsApi.md#get_asset_by_id) | **GET** /assets/{asset-id} | Information about an asset
 *AssetsApi* | [**get_assets**](docs/AssetsApi.md#get_assets) | **GET** /assets | Information about assets
 *AssetsApi* | [**get_attribute_display**](docs/AssetsApi.md#get_attribute_display) | **GET** /attribute-display | How attributes are displayed
-*AssetsApi* | [**listen_assets**](docs/AssetsApi.md#listen_assets) | **GET** /asset-listener | WebSocket connection for asset changes
+*AssetsApi* | [**listen_asset**](docs/AssetsApi.md#listen_asset) | **GET** /asset-listener | WebSocket connection for asset changes
 *AssetsApi* | [**post_asset**](docs/AssetsApi.md#post_asset) | **POST** /assets | Create an asset
 *AssetsApi* | [**post_bulk_assets**](docs/AssetsApi.md#post_bulk_assets) | **POST** /assets-bulk | Create a list of assets
 *AssetsApi* | [**put_asset**](docs/AssetsApi.md#put_asset) | **PUT** /assets | Create or update an asset

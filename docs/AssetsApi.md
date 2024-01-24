@@ -12,7 +12,7 @@ Method | HTTP request | Description
 [**get_asset_by_id**](AssetsApi.md#get_asset_by_id) | **GET** /assets/{asset-id} | Information about an asset
 [**get_assets**](AssetsApi.md#get_assets) | **GET** /assets | Information about assets
 [**get_attribute_display**](AssetsApi.md#get_attribute_display) | **GET** /attribute-display | How attributes are displayed
-[**listen_assets**](AssetsApi.md#listen_assets) | **GET** /asset-listener | WebSocket connection for asset changes
+[**listen_asset**](AssetsApi.md#listen_asset) | **GET** /asset-listener | WebSocket connection for asset changes
 [**post_asset**](AssetsApi.md#post_asset) | **POST** /assets | Create an asset
 [**post_bulk_assets**](AssetsApi.md#post_bulk_assets) | **POST** /assets-bulk | Create a list of assets
 [**put_asset**](AssetsApi.md#put_asset) | **PUT** /assets | Create or update an asset
@@ -734,8 +734,8 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listen_assets**
-> AssetListen listen_assets(asset_id=asset_id, asset_type_name=asset_type_name, tag=tag)
+# **listen_asset**
+> AssetListen listen_asset(asset_id=asset_id, asset_type_name=asset_type_name, tag=tag)
 
 WebSocket connection for asset changes
 
@@ -786,11 +786,11 @@ with eliona.api_client2.ApiClient(configuration) as api_client:
 
     try:
         # WebSocket connection for asset changes
-        api_response = api_instance.listen_assets(asset_id=asset_id, asset_type_name=asset_type_name, tag=tag)
-        print("The response of AssetsApi->listen_assets:\n")
+        api_response = api_instance.listen_asset(asset_id=asset_id, asset_type_name=asset_type_name, tag=tag)
+        print("The response of AssetsApi->listen_asset:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AssetsApi->listen_assets: %s\n" % e)
+        print("Exception when calling AssetsApi->listen_asset: %s\n" % e)
 ```
 
 

@@ -2365,7 +2365,7 @@ class AssetsApi:
 
 
     @validate_call
-    def listen_assets(
+    def listen_asset(
         self,
         asset_id: Annotated[Optional[StrictInt], Field(description="Filter for a specific asset id")] = None,
         asset_type_name: Annotated[Optional[StrictStr], Field(description="Filter the name of the asset type")] = None,
@@ -2415,7 +2415,7 @@ class AssetsApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._listen_assets_serialize(
+        _param = self._listen_asset_serialize(
             asset_id=asset_id,
             asset_type_name=asset_type_name,
             tag=tag,
@@ -2440,7 +2440,7 @@ class AssetsApi:
 
 
     @validate_call
-    def listen_assets_with_http_info(
+    def listen_asset_with_http_info(
         self,
         asset_id: Annotated[Optional[StrictInt], Field(description="Filter for a specific asset id")] = None,
         asset_type_name: Annotated[Optional[StrictStr], Field(description="Filter the name of the asset type")] = None,
@@ -2490,7 +2490,7 @@ class AssetsApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._listen_assets_serialize(
+        _param = self._listen_asset_serialize(
             asset_id=asset_id,
             asset_type_name=asset_type_name,
             tag=tag,
@@ -2515,7 +2515,7 @@ class AssetsApi:
 
 
     @validate_call
-    def listen_assets_without_preload_content(
+    def listen_asset_without_preload_content(
         self,
         asset_id: Annotated[Optional[StrictInt], Field(description="Filter for a specific asset id")] = None,
         asset_type_name: Annotated[Optional[StrictStr], Field(description="Filter the name of the asset type")] = None,
@@ -2565,7 +2565,7 @@ class AssetsApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._listen_assets_serialize(
+        _param = self._listen_asset_serialize(
             asset_id=asset_id,
             asset_type_name=asset_type_name,
             tag=tag,
@@ -2585,7 +2585,7 @@ class AssetsApi:
         return response_data.response
 
 
-    def _listen_assets_serialize(
+    def _listen_asset_serialize(
         self,
         asset_id,
         asset_type_name,
