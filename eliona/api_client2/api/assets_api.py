@@ -2367,9 +2367,6 @@ class AssetsApi:
     @validate_call
     def listen_asset(
         self,
-        asset_id: Annotated[Optional[StrictInt], Field(description="Filter for a specific asset id")] = None,
-        asset_type_name: Annotated[Optional[StrictStr], Field(description="Filter the name of the asset type")] = None,
-        tag: Annotated[Optional[StrictStr], Field(description="Filter the tag")] = None,
         expansions: Annotated[Optional[List[StrictStr]], Field(description="List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows 'ObjectName.fieldName'.")] = None,
         _request_timeout: Union[
             None,
@@ -2388,12 +2385,6 @@ class AssetsApi:
 
         Open a WebSocket connection to get informed when asset is created, updated or deleted.
 
-        :param asset_id: Filter for a specific asset id
-        :type asset_id: int
-        :param asset_type_name: Filter the name of the asset type
-        :type asset_type_name: str
-        :param tag: Filter the tag
-        :type tag: str
         :param expansions: List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows 'ObjectName.fieldName'.
         :type expansions: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -2419,9 +2410,6 @@ class AssetsApi:
         """ # noqa: E501
 
         _param = self._listen_asset_serialize(
-            asset_id=asset_id,
-            asset_type_name=asset_type_name,
-            tag=tag,
             expansions=expansions,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -2446,9 +2434,6 @@ class AssetsApi:
     @validate_call
     def listen_asset_with_http_info(
         self,
-        asset_id: Annotated[Optional[StrictInt], Field(description="Filter for a specific asset id")] = None,
-        asset_type_name: Annotated[Optional[StrictStr], Field(description="Filter the name of the asset type")] = None,
-        tag: Annotated[Optional[StrictStr], Field(description="Filter the tag")] = None,
         expansions: Annotated[Optional[List[StrictStr]], Field(description="List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows 'ObjectName.fieldName'.")] = None,
         _request_timeout: Union[
             None,
@@ -2467,12 +2452,6 @@ class AssetsApi:
 
         Open a WebSocket connection to get informed when asset is created, updated or deleted.
 
-        :param asset_id: Filter for a specific asset id
-        :type asset_id: int
-        :param asset_type_name: Filter the name of the asset type
-        :type asset_type_name: str
-        :param tag: Filter the tag
-        :type tag: str
         :param expansions: List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows 'ObjectName.fieldName'.
         :type expansions: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -2498,9 +2477,6 @@ class AssetsApi:
         """ # noqa: E501
 
         _param = self._listen_asset_serialize(
-            asset_id=asset_id,
-            asset_type_name=asset_type_name,
-            tag=tag,
             expansions=expansions,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -2525,9 +2501,6 @@ class AssetsApi:
     @validate_call
     def listen_asset_without_preload_content(
         self,
-        asset_id: Annotated[Optional[StrictInt], Field(description="Filter for a specific asset id")] = None,
-        asset_type_name: Annotated[Optional[StrictStr], Field(description="Filter the name of the asset type")] = None,
-        tag: Annotated[Optional[StrictStr], Field(description="Filter the tag")] = None,
         expansions: Annotated[Optional[List[StrictStr]], Field(description="List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows 'ObjectName.fieldName'.")] = None,
         _request_timeout: Union[
             None,
@@ -2546,12 +2519,6 @@ class AssetsApi:
 
         Open a WebSocket connection to get informed when asset is created, updated or deleted.
 
-        :param asset_id: Filter for a specific asset id
-        :type asset_id: int
-        :param asset_type_name: Filter the name of the asset type
-        :type asset_type_name: str
-        :param tag: Filter the tag
-        :type tag: str
         :param expansions: List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows 'ObjectName.fieldName'.
         :type expansions: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -2577,9 +2544,6 @@ class AssetsApi:
         """ # noqa: E501
 
         _param = self._listen_asset_serialize(
-            asset_id=asset_id,
-            asset_type_name=asset_type_name,
-            tag=tag,
             expansions=expansions,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -2599,9 +2563,6 @@ class AssetsApi:
 
     def _listen_asset_serialize(
         self,
-        asset_id,
-        asset_type_name,
-        tag,
         expansions,
         _request_auth,
         _content_type,
@@ -2624,18 +2585,6 @@ class AssetsApi:
 
         # process the path parameters
         # process the query parameters
-        if asset_id is not None:
-            
-            _query_params.append(('assetId', asset_id))
-            
-        if asset_type_name is not None:
-            
-            _query_params.append(('assetTypeName', asset_type_name))
-            
-        if tag is not None:
-            
-            _query_params.append(('tag', tag))
-            
         if expansions is not None:
             
             _query_params.append(('expansions', expansions))
