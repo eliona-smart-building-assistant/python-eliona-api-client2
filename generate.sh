@@ -7,4 +7,4 @@ docker run --rm \
     --git-repo-id python-eliona-api-client \
     -i https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/main/openapi.yaml \
     -o /local \
-    --additional-properties="packageName=eliona.api_client,packageVersion=2.6.0,projectName=Python Eliona API client 2"
+    --additional-properties="packageName=eliona.api_client,packageVersion=2.6.1,projectName=Python Eliona API client 2"

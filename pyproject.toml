@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "eliona.api_client2"
-version = "2.6.0"
+version = "2.6.1"
 description = "Eliona REST API"
 authors = ["Eliona by IoTEC AG <hello@eliona.io>"]
 license = "MIT License"

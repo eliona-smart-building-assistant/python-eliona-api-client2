@@ -15,7 +15,7 @@
 """  # noqa: E501
 
 
-__version__ = "2.6.0"
+__version__ = "2.6.1"
 
 # import apis into sdk package
 from eliona.api_client2.api.agents_api import AgentsApi
