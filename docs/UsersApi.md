@@ -1,6 +1,6 @@
 # eliona.api_client2.UsersApi
 
-All URIs are relative to *https://name.eliona.io/api/v2*
+All URIs are relative to *https://name.eliona.io/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -29,10 +29,10 @@ from eliona.api_client2.models.user import User
 from eliona.api_client2.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://name.eliona.io/api/v2
+# Defining the host is optional and defaults to https://name.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = eliona.api_client2.Configuration(
-    host = "https://name.eliona.io/api/v2"
+    host = "https://name.eliona.io/v2"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -117,10 +117,10 @@ from eliona.api_client2.models.user import User
 from eliona.api_client2.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://name.eliona.io/api/v2
+# Defining the host is optional and defaults to https://name.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = eliona.api_client2.Configuration(
-    host = "https://name.eliona.io/api/v2"
+    host = "https://name.eliona.io/v2"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -200,10 +200,10 @@ from eliona.api_client2.models.user import User
 from eliona.api_client2.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://name.eliona.io/api/v2
+# Defining the host is optional and defaults to https://name.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = eliona.api_client2.Configuration(
-    host = "https://name.eliona.io/api/v2"
+    host = "https://name.eliona.io/v2"
 )
 
 # The client must configure the authentication and authorization parameters
