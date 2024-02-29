@@ -54,7 +54,6 @@ from eliona.api_client2.models.project import Project
 from eliona.api_client2.models.tag import Tag
 from eliona.api_client2.models.translation import Translation
 from eliona.api_client2.models.user import User
-from eliona.api_client2.models.value_mapping import ValueMapping
 from eliona.api_client2.models.widget import Widget
 from eliona.api_client2.models.widget_data import WidgetData
 from eliona.api_client2.models.widget_type import WidgetType

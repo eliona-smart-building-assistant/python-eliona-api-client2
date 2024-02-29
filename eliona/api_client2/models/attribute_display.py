@@ -24,7 +24,6 @@ from pydantic import BaseModel, StrictBool, StrictFloat, StrictInt, StrictStr
 from pydantic import Field
 from typing_extensions import Annotated
 from eliona.api_client2.models.data_subtype import DataSubtype
-from eliona.api_client2.models.value_mapping import ValueMapping
 try:
     from typing import Self
 except ImportError:
@@ -44,7 +43,7 @@ class AttributeDisplay(BaseModel):
     viewer: Optional[StrictBool] = Field(default=False, description="Should the attribute be displayed in viewer")
     ar: Optional[StrictBool] = Field(default=False, description="Should the attribute be displayed in AR")
     sequence: Optional[StrictInt] = Field(default=None, description="Sequence in AR display")
-    map: Optional[List[ValueMapping]] = Field(default=None, description="list of mapping between value and custom text")
+    map: Optional[List[Dict[str, Any]]] = Field(default=None, description="list of mapping between value and custom text")
     __properties: ClassVar[List[str]] = ["assetId", "subtype", "attribute", "unit", "precision", "min", "max", "viewer", "ar", "sequence", "map"]
 
     model_config = {
@@ -84,13 +83,6 @@ class AttributeDisplay(BaseModel):
             },
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of each item in map (list)
-        _items = []
-        if self.map:
-            for _item in self.map:
-                if _item:
-                    _items.append(_item.to_dict())
-            _dict['map'] = _items
         # set to None if unit (nullable) is None
         # and model_fields_set contains the field
         if self.unit is None and "unit" in self.model_fields_set:
@@ -153,7 +145,7 @@ class AttributeDisplay(BaseModel):
             "viewer": obj.get("viewer") if obj.get("viewer") is not None else False,
             "ar": obj.get("ar") if obj.get("ar") is not None else False,
             "sequence": obj.get("sequence"),
-            "map": [ValueMapping.from_dict(_item) for _item in obj.get("map")] if obj.get("map") is not None else None
+            "map": obj.get("map")
         })
         return _obj
 

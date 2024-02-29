@@ -25,7 +25,6 @@ from pydantic import Field
 from typing_extensions import Annotated
 from eliona.api_client2.models.data_subtype import DataSubtype
 from eliona.api_client2.models.translation import Translation
-from eliona.api_client2.models.value_mapping import ValueMapping
 try:
     from typing import Self
 except ImportError:
@@ -53,7 +52,7 @@ class AssetTypeAttribute(BaseModel):
     virtual: Optional[StrictBool] = Field(default=None, description="Is the attribute virtual or not")
     scale: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="value scale")
     zero: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="value scale")
-    map: Optional[List[ValueMapping]] = Field(default=None, description="list of mapping between value and custom text")
+    map: Optional[List[Dict[str, Any]]] = Field(default=None, description="list of mapping between value and custom text")
     source_path: Optional[List[StrictStr]] = Field(default=None, description="source path for attribute value", alias="sourcePath")
     is_digital: Optional[StrictBool] = Field(default=None, description="is attribute digital", alias="isDigital")
     __properties: ClassVar[List[str]] = ["assetTypeName", "name", "subtype", "type", "enable", "translation", "unit", "precision", "min", "max", "aggregationMode", "aggregationRasters", "viewer", "ar", "sequence", "virtual", "scale", "zero", "map", "sourcePath", "isDigital"]
@@ -129,13 +128,6 @@ class AssetTypeAttribute(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of translation
         if self.translation:
             _dict['translation'] = self.translation.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of each item in map (list)
-        _items = []
-        if self.map:
-            for _item in self.map:
-                if _item:
-                    _items.append(_item.to_dict())
-            _dict['map'] = _items
         # set to None if asset_type_name (nullable) is None
         # and model_fields_set contains the field
         if self.asset_type_name is None and "asset_type_name" in self.model_fields_set:
@@ -251,7 +243,7 @@ class AssetTypeAttribute(BaseModel):
             "virtual": obj.get("virtual"),
             "scale": obj.get("scale"),
             "zero": obj.get("zero"),
-            "map": [ValueMapping.from_dict(_item) for _item in obj.get("map")] if obj.get("map") is not None else None,
+            "map": obj.get("map"),
             "sourcePath": obj.get("sourcePath"),
             "isDigital": obj.get("isDigital")
         })

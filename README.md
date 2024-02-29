@@ -244,7 +244,6 @@ Class | Method | HTTP request | Description
  - [Tag](docs/Tag.md)
  - [Translation](docs/Translation.md)
  - [User](docs/User.md)
- - [ValueMapping](docs/ValueMapping.md)
  - [Widget](docs/Widget.md)
  - [WidgetData](docs/WidgetData.md)
  - [WidgetType](docs/WidgetType.md)

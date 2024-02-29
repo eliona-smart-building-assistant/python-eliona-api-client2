@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **viewer** | **bool** | Should the attribute be displayed in viewer | [optional] [default to False]
 **ar** | **bool** | Should the attribute be displayed in AR | [optional] [default to False]
 **sequence** | **int** | Sequence in AR display | [optional] 
-**map** | [**List[ValueMapping]**](ValueMapping.md) | list of mapping between value and custom text | [optional] 
+**map** | **List[object]** | list of mapping between value and custom text | [optional] 
 
 ## Example
 

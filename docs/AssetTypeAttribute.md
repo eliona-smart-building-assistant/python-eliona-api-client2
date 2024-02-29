@@ -24,7 +24,7 @@ Name | Type | Description | Notes
 **virtual** | **bool** | Is the attribute virtual or not | [optional] 
 **scale** | **float** | value scale | [optional] 
 **zero** | **float** | value scale | [optional] 
-**map** | [**List[ValueMapping]**](ValueMapping.md) | list of mapping between value and custom text | [optional] 
+**map** | **List[object]** | list of mapping between value and custom text | [optional] 
 **source_path** | **List[str]** | source path for attribute value | [optional] 
 **is_digital** | **bool** | is attribute digital | [optional] 
 
