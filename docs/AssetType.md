@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **model** | **str** | The specific model of assets of this type | [optional] 
 **translation** | [**Translation**](Translation.md) |  | [optional] 
 **urldoc** | **str** | The url describing assets of this type | [optional] 
-**icon** | **str** | Icon name corresponding to assets of this type | [optional] 
+**icon** | **str** | Icon name corresponding to assets of this type: blind, building, button, closable, elevator, environment, fallback, filling, gateway, light, mailbox, parking, people, power, rack, storey, trash, ventilation, vibration, water, weather | [optional] 
 **payload_function** | **str** | Asset types payload function | [optional] 
 **allowed_inactivity** | **str** |  | [optional] 
 **attributes** | [**List[AssetTypeAttribute]**](AssetTypeAttribute.md) | List of named attributes | [optional] 
