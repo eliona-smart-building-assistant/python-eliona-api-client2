@@ -20,8 +20,6 @@ Generates QR code linking to an asset in the Eliona frontend.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.rest import ApiException
 from pprint import pprint

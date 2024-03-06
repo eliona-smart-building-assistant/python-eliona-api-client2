@@ -24,8 +24,6 @@ Gets information about a node.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.node import Node
 from eliona.api_client2.rest import ApiException
@@ -112,8 +110,6 @@ Gets information about nodes.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.node import Node
 from eliona.api_client2.rest import ApiException
@@ -195,8 +191,6 @@ Create a new node.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.node import Node
 from eliona.api_client2.rest import ApiException
@@ -282,8 +276,6 @@ Deprecated - Use POST /nodes to create PUT /nodes/{node-ident} to update.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.node import Node
 from eliona.api_client2.rest import ApiException
@@ -369,8 +361,6 @@ Update a node.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.node import Node
 from eliona.api_client2.rest import ApiException

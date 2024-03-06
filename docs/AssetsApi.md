@@ -34,8 +34,6 @@ Deletes an asset
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.rest import ApiException
 from pprint import pprint
@@ -119,8 +117,6 @@ Delete multiple assets based on the identifiers defined by the 'identifyBy' para
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.rest import ApiException
 from pprint import pprint
@@ -208,8 +204,6 @@ Simulates the process of deleting multiple assets via the 'DELETE /assets-bulk' 
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.asset_dry_run import AssetDryRun
 from eliona.api_client2.rest import ApiException
@@ -299,8 +293,6 @@ Simulates the process of creating assets via the 'POST /assets-bulk' endpoint wi
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.asset import Asset
 from eliona.api_client2.models.asset_dry_run import AssetDryRun
@@ -391,8 +383,6 @@ Simulates the process of creating or updating assets via the 'PUT /assets-bulk' 
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.asset import Asset
 from eliona.api_client2.models.asset_dry_run import AssetDryRun
@@ -483,8 +473,6 @@ Gets information about an asset.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.asset import Asset
 from eliona.api_client2.rest import ApiException
@@ -573,8 +561,6 @@ Gets a list of assets
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.asset import Asset
 from eliona.api_client2.rest import ApiException
@@ -664,8 +650,6 @@ Gets information about how attributes for specific assets are displayed in front
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.attribute_display import AttributeDisplay
 from eliona.api_client2.rest import ApiException
@@ -747,8 +731,6 @@ Open a WebSocket connection to get informed when asset is created, updated or de
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.asset_listen import AssetListen
 from eliona.api_client2.rest import ApiException
@@ -834,8 +816,6 @@ This process involves creating an asset. The determination if the asset already 
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.asset import Asset
 from eliona.api_client2.rest import ApiException
@@ -926,8 +906,6 @@ This process involves creating the assets in the list. The determination if the 
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.asset import Asset
 from eliona.api_client2.rest import ApiException
@@ -1018,8 +996,6 @@ This process involves creating or updating an asset. The choice between updating
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.asset import Asset
 from eliona.api_client2.rest import ApiException
@@ -1110,8 +1086,6 @@ Deprecated: use the 'PUT /asset' method and optionally the 'identifyBy' paramete
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.asset import Asset
 from eliona.api_client2.rest import ApiException
@@ -1202,8 +1176,6 @@ Create or update how attributes are displayed in frontend. Uses the unique combi
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.attribute_display import AttributeDisplay
 from eliona.api_client2.rest import ApiException
@@ -1289,8 +1261,6 @@ This process involves creating or updating assets. The choice between updating o
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.asset import Asset
 from eliona.api_client2.rest import ApiException

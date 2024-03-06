@@ -22,8 +22,6 @@ Gets information about a project.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.project import Project
 from eliona.api_client2.rest import ApiException
@@ -110,8 +108,6 @@ Gets a list of projects
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.project import Project
 from eliona.api_client2.rest import ApiException
@@ -193,8 +189,6 @@ Creates a project if no project exists or update it if already exists. Uses the 
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.project import Project
 from eliona.api_client2.rest import ApiException

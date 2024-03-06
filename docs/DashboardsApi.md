@@ -22,8 +22,6 @@ Gets information about a dashboard.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.dashboard import Dashboard
 from eliona.api_client2.rest import ApiException
@@ -112,8 +110,6 @@ Gets a list of dashboards
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.dashboard import Dashboard
 from eliona.api_client2.rest import ApiException
@@ -199,8 +195,6 @@ Create a new dashboard for frontend
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.dashboard import Dashboard
 from eliona.api_client2.rest import ApiException

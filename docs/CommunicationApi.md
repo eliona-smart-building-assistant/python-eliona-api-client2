@@ -22,8 +22,6 @@ Gets receipt information for a message.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.message_receipt import MessageReceipt
 from eliona.api_client2.rest import ApiException
@@ -110,8 +108,6 @@ Sends an e-mail to recipients
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.message import Message
 from eliona.api_client2.models.message_receipt import MessageReceipt
@@ -198,8 +194,6 @@ Sends a notification to Eliona users
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.message_receipt import MessageReceipt
 from eliona.api_client2.models.notification import Notification

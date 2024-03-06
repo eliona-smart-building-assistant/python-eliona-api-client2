@@ -26,8 +26,6 @@ Gets information about alarm.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.alarm import Alarm
 from eliona.api_client2.rest import ApiException
@@ -116,8 +114,6 @@ Gets information about alarm over the entire time. This includes current alarm a
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.alarm import Alarm
 from eliona.api_client2.rest import ApiException
@@ -205,8 +201,6 @@ Gets information about alarms
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.alarm import Alarm
 from eliona.api_client2.rest import ApiException
@@ -294,8 +288,6 @@ Gets information about alarms over the entire time. This includes current alarms
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.alarm import Alarm
 from eliona.api_client2.rest import ApiException
@@ -383,8 +375,6 @@ Gets information about an alarms with the highest priority for each asset.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.alarm import Alarm
 from eliona.api_client2.rest import ApiException
@@ -472,8 +462,6 @@ Open a WebSocket connection to get informed when new alarm data is written or an
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.alarm_listen import AlarmListen
 from eliona.api_client2.rest import ApiException
@@ -555,8 +543,6 @@ Update properties of alarm for given id.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.rest import ApiException
 from pprint import pprint

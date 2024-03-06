@@ -25,8 +25,6 @@ Deletes an aggregation by the given id.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.rest import ApiException
 from pprint import pprint
@@ -110,8 +108,6 @@ Gets information about an aggregation by the given id.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.aggregation import Aggregation
 from eliona.api_client2.rest import ApiException
@@ -198,8 +194,6 @@ Gets a list of aggregations
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.aggregation import Aggregation
 from eliona.api_client2.rest import ApiException
@@ -281,8 +275,6 @@ Creates a new aggregation.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.aggregation import Aggregation
 from eliona.api_client2.rest import ApiException
@@ -369,8 +361,6 @@ Creates an aggregation or updates if already exists. Uses the unique combination
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.aggregation import Aggregation
 from eliona.api_client2.rest import ApiException
@@ -456,8 +446,6 @@ Updates an aggregation.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.aggregation import Aggregation
 from eliona.api_client2.rest import ApiException

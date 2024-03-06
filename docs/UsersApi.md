@@ -22,8 +22,6 @@ Gets information about an user.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.user import User
 from eliona.api_client2.rest import ApiException
@@ -110,8 +108,6 @@ Gets a list of users
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.user import User
 from eliona.api_client2.rest import ApiException
@@ -193,8 +189,6 @@ Creates an user if no user exists or update it if already exists. Uses the email
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.user import User
 from eliona.api_client2.rest import ApiException

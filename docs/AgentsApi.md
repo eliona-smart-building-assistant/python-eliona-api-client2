@@ -35,8 +35,6 @@ Gets information about an agent.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.agent import Agent
 from eliona.api_client2.rest import ApiException
@@ -125,8 +123,6 @@ Gets information about agent device.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.agent_device import AgentDevice
 from eliona.api_client2.rest import ApiException
@@ -214,8 +210,6 @@ Gets information about agent device mapping.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.agent_device_mapping import AgentDeviceMapping
 from eliona.api_client2.rest import ApiException
@@ -303,8 +297,6 @@ Gets information about mappings between agent and eliona.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.agent_device_mapping import AgentDeviceMapping
 from eliona.api_client2.rest import ApiException
@@ -392,8 +384,6 @@ Gets information about agent devices.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.agent_device import AgentDevice
 from eliona.api_client2.rest import ApiException
@@ -481,8 +471,6 @@ Gets information about agents.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.agent import Agent
 from eliona.api_client2.rest import ApiException
@@ -564,8 +552,6 @@ Gets information about agents.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.agent import Agent
 from eliona.api_client2.rest import ApiException
@@ -651,8 +637,6 @@ Create a new agent for a specific class
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.agent import Agent
 from eliona.api_client2.rest import ApiException
@@ -740,8 +724,6 @@ Create a new agent device.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.agent_device import AgentDevice
 from eliona.api_client2.rest import ApiException
@@ -831,8 +813,6 @@ Create a new agent device mapping.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.agent_device_mapping import AgentDeviceMapping
 from eliona.api_client2.rest import ApiException
@@ -922,8 +902,6 @@ Deprecated - use POST /agents/{agent-class} for creating and PUT /agents/{agent-
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.agent import Agent
 from eliona.api_client2.rest import ApiException
@@ -1011,8 +989,6 @@ Update an agent.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.agent import Agent
 from eliona.api_client2.rest import ApiException
@@ -1103,8 +1079,6 @@ Deprecated - use POST /agents/{agent-class}/{agent-id}/devices for creating and 
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.agent_device import AgentDevice
 from eliona.api_client2.rest import ApiException
@@ -1194,8 +1168,6 @@ Update a new agent device.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.agent_device import AgentDevice
 from eliona.api_client2.rest import ApiException
@@ -1285,8 +1257,6 @@ Deprecated - Use POST /agent-devices/{agent-class}/{agent-device-id}/mappings fo
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.agent_device_mapping import AgentDeviceMapping
 from eliona.api_client2.rest import ApiException
@@ -1376,8 +1346,6 @@ Update a new agent device mapping.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.agent_device_mapping import AgentDeviceMapping
 from eliona.api_client2.rest import ApiException

@@ -25,8 +25,6 @@ Gets information about data for assets.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.data import Data
 from eliona.api_client2.rest import ApiException
@@ -118,8 +116,6 @@ Gets aggregated data sets which combines a set of data points for a defined peri
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.data_aggregated import DataAggregated
 from eliona.api_client2.rest import ApiException
@@ -215,8 +211,6 @@ Gets trend information about historical data for assets.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.data import Data
 from eliona.api_client2.rest import ApiException
@@ -310,8 +304,6 @@ Open a WebSocket connection to get informed when new asset data is written or an
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.data_listen import DataListen
 from eliona.api_client2.rest import ApiException
@@ -399,8 +391,6 @@ Create multiple asset data or update data if already exists. Uses the unique com
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.data import Data
 from eliona.api_client2.rest import ApiException
@@ -486,8 +476,6 @@ Create new asset data or update data if already exists. Uses the unique combinat
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.data import Data
 from eliona.api_client2.rest import ApiException

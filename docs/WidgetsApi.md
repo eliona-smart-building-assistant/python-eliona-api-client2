@@ -21,8 +21,6 @@ Gets information about widgets on a dashboard.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.widget import Widget
 from eliona.api_client2.rest import ApiException
@@ -111,8 +109,6 @@ Create a new widget and add this to a dashboard
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.widget import Widget
 from eliona.api_client2.rest import ApiException

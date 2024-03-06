@@ -27,8 +27,6 @@ Deletes an asset type and the attributes for this asset type.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.rest import ApiException
 from pprint import pprint
@@ -112,8 +110,6 @@ Gets information about an asset type.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.asset_type import AssetType
 from eliona.api_client2.rest import ApiException
@@ -202,8 +198,6 @@ Returns a list of asset types
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.asset_type import AssetType
 from eliona.api_client2.rest import ApiException
@@ -289,8 +283,6 @@ Create a new asset type.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.asset_type import AssetType
 from eliona.api_client2.rest import ApiException
@@ -379,8 +371,6 @@ Create a new asset type attribute.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.asset_type_attribute import AssetTypeAttribute
 from eliona.api_client2.rest import ApiException
@@ -469,8 +459,6 @@ Create a new asset type or update an asset type if already exists. Uses the uniq
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.asset_type import AssetType
 from eliona.api_client2.rest import ApiException
@@ -558,8 +546,6 @@ Create a new asset type attribute or update an asset type attribute if already e
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.asset_type_attribute import AssetTypeAttribute
 from eliona.api_client2.rest import ApiException
@@ -647,8 +633,6 @@ Update an asset type.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.asset_type import AssetType
 from eliona.api_client2.rest import ApiException

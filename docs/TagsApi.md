@@ -22,8 +22,6 @@ Gets information about a tag.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.tag import Tag
 from eliona.api_client2.rest import ApiException
@@ -110,8 +108,6 @@ Gets a list of tags
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.tag import Tag
 from eliona.api_client2.rest import ApiException
@@ -193,8 +189,6 @@ Creates a tag if no tag exists or update it if already exists. Uses name for upd
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.tag import Tag
 from eliona.api_client2.rest import ApiException

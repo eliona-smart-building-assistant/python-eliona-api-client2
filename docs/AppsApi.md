@@ -23,8 +23,6 @@ Gets information about an app.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.app import App
 from eliona.api_client2.rest import ApiException
@@ -110,8 +108,6 @@ Gets information about a patch for an app.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.patch import Patch
 from eliona.api_client2.rest import ApiException
@@ -199,8 +195,6 @@ Update properties of an app.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.rest import ApiException
 from pprint import pprint
@@ -285,8 +279,6 @@ Updates properties of a patch for an app.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.rest import ApiException
 from pprint import pprint

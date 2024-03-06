@@ -25,8 +25,6 @@ Deletes a widget type and the elements for this widget type.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.rest import ApiException
 from pprint import pprint
@@ -110,8 +108,6 @@ Gets information about a widget type.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.widget_type import WidgetType
 from eliona.api_client2.rest import ApiException
@@ -200,8 +196,6 @@ Returns a list of widget types
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.widget_type import WidgetType
 from eliona.api_client2.rest import ApiException
@@ -287,8 +281,6 @@ Create a new widget type.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.widget_type import WidgetType
 from eliona.api_client2.rest import ApiException
@@ -377,8 +369,6 @@ Create a new widget type or update it if already exists. Uses the unique widget 
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.widget_type import WidgetType
 from eliona.api_client2.rest import ApiException
@@ -466,8 +456,6 @@ Update a widget type.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.widget_type import WidgetType
 from eliona.api_client2.rest import ApiException

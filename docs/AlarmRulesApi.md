@@ -25,8 +25,6 @@ Deletes an alarm rule.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.rest import ApiException
 from pprint import pprint
@@ -110,8 +108,6 @@ Gets information about an alarm rule.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.alarm_rule import AlarmRule
 from eliona.api_client2.rest import ApiException
@@ -200,8 +196,6 @@ Gets information about alarm rules.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.alarm_rule import AlarmRule
 from eliona.api_client2.rest import ApiException
@@ -289,8 +283,6 @@ Create a new alarm rule.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.alarm_rule import AlarmRule
 from eliona.api_client2.rest import ApiException
@@ -376,8 +368,6 @@ Deprecated - Use POST /alarm-rules to create and PUT /alarm-rules/{alarm-rule-id
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.alarm_rule import AlarmRule
 from eliona.api_client2.rest import ApiException
@@ -463,8 +453,6 @@ Update an alarm rule.
 * Bearer (JWT) Authentication (BearerAuth):
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.models.alarm_rule import AlarmRule
 from eliona.api_client2.rest import ApiException

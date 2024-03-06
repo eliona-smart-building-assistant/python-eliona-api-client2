@@ -19,8 +19,6 @@ Gets specification for this API version as an openapi.json file.
 
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.rest import ApiException
 from pprint import pprint
@@ -82,8 +80,6 @@ Gets information about the APIs version.
 
 
 ```python
-import time
-import os
 import eliona.api_client2
 from eliona.api_client2.rest import ApiException
 from pprint import pprint
