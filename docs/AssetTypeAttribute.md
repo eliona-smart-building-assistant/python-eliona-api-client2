@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 **ar** | **bool** | Should the attribute be displayed in AR | [optional] [default to False]
 **sequence** | **int** | Sequence in AR display | [optional] 
 **virtual** | **bool** | Is the attribute virtual or not | [optional] 
+**formula** | **str** | calculation rule to calculate the value for this attribute | [optional] 
 **scale** | **float** | value scale | [optional] 
 **zero** | **float** | value scale | [optional] 
 **map** | **List[object]** | list of mapping between value and custom text | [optional] 

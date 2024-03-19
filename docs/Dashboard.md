@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **user_id** | **str** | ID of the user who owns the dashboard | 
 **sequence** | **int** | The sequence of the dashboard | [optional] [default to 0]
 **widgets** | [**List[Widget]**](Widget.md) | List of widgets on this dashboard (order matches the order of widgets on the dashboard) | [optional] 
+**public** | **bool** | Is the dashboard public and not bound to a dedicated user | [optional] [default to False]
 
 ## Example
 
