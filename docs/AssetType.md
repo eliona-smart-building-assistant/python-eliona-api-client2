@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **icon** | **str** | Icon name corresponding to assets of this type: blind, building, button, closable, elevator, environment, fallback, filling, gateway, light, mailbox, parking, people, power, rack, storey, trash, ventilation, vibration, water, weather | [optional] 
 **payload_function** | **str** | Asset types payload function | [optional] 
 **allowed_inactivity** | **str** |  | [optional] 
+**is_tracker** | **bool** | Function as a tracker | [optional] [default to False]
 **attributes** | [**List[AssetTypeAttribute]**](AssetTypeAttribute.md) | List of named attributes | [optional] 
 
 ## Example

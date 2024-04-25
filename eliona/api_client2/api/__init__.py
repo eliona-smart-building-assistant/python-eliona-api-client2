@@ -8,6 +8,7 @@ from eliona.api_client2.api.alarms_api import AlarmsApi
 from eliona.api_client2.api.apps_api import AppsApi
 from eliona.api_client2.api.asset_types_api import AssetTypesApi
 from eliona.api_client2.api.assets_api import AssetsApi
+from eliona.api_client2.api.calculation_rules_api import CalculationRulesApi
 from eliona.api_client2.api.communication_api import CommunicationApi
 from eliona.api_client2.api.dashboards_api import DashboardsApi
 from eliona.api_client2.api.data_api import DataApi
