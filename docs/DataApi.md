@@ -104,7 +104,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_data_aggregated**
-> List[DataAggregated] get_data_aggregated(from_date=from_date, to_date=to_date, asset_id=asset_id, data_subtype=data_subtype, asset_type_name=asset_type_name, aggregation_id=aggregation_id)
+> List[DataAggregated] get_data_aggregated(from_date=from_date, to_date=to_date, asset_id=asset_id, data_subtype=data_subtype, asset_type_name=asset_type_name, aggregation_id=aggregation_id, aggregation_raster=aggregation_raster)
 
 Get aggregated data
 
@@ -153,10 +153,11 @@ with eliona.api_client2.ApiClient(configuration) as api_client:
     data_subtype = 'input' # str | Filter for a specific type of asset data (optional)
     asset_type_name = 'weather_location' # str | Filter the name of the asset type (optional)
     aggregation_id = 0815 # int | Filter for a specific aggregation id (optional)
+    aggregation_raster = 'DAY' # str | Aggregation calculation interval (optional)
 
     try:
         # Get aggregated data
-        api_response = api_instance.get_data_aggregated(from_date=from_date, to_date=to_date, asset_id=asset_id, data_subtype=data_subtype, asset_type_name=asset_type_name, aggregation_id=aggregation_id)
+        api_response = api_instance.get_data_aggregated(from_date=from_date, to_date=to_date, asset_id=asset_id, data_subtype=data_subtype, asset_type_name=asset_type_name, aggregation_id=aggregation_id, aggregation_raster=aggregation_raster)
         print("The response of DataApi->get_data_aggregated:\n")
         pprint(api_response)
     except Exception as e:
@@ -176,6 +177,7 @@ Name | Type | Description  | Notes
  **data_subtype** | **str**| Filter for a specific type of asset data | [optional] 
  **asset_type_name** | **str**| Filter the name of the asset type | [optional] 
  **aggregation_id** | **int**| Filter for a specific aggregation id | [optional] 
+ **aggregation_raster** | **str**| Aggregation calculation interval | [optional] 
 
 ### Return type
 
