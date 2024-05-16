@@ -21,12 +21,12 @@ json = "{}"
 # create an instance of WidgetTypeElement from a JSON string
 widget_type_element_instance = WidgetTypeElement.from_json(json)
 # print the JSON string representation of the object
-print WidgetTypeElement.to_json()
+print(WidgetTypeElement.to_json())
 
 # convert the object into a dict
 widget_type_element_dict = widget_type_element_instance.to_dict()
 # create an instance of WidgetTypeElement from a dict
-widget_type_element_form_dict = widget_type_element.from_dict(widget_type_element_dict)
+widget_type_element_from_dict = WidgetTypeElement.from_dict(widget_type_element_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

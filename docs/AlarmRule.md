@@ -35,12 +35,12 @@ json = "{}"
 # create an instance of AlarmRule from a JSON string
 alarm_rule_instance = AlarmRule.from_json(json)
 # print the JSON string representation of the object
-print AlarmRule.to_json()
+print(AlarmRule.to_json())
 
 # convert the object into a dict
 alarm_rule_dict = alarm_rule_instance.to_dict()
 # create an instance of AlarmRule from a dict
-alarm_rule_form_dict = alarm_rule.from_dict(alarm_rule_dict)
+alarm_rule_from_dict = AlarmRule.from_dict(alarm_rule_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

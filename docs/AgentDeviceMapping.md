@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 **dead_band** | **float** |  | [optional] 
 **filter** | **str** |  | [optional] 
 **tau** | **float** |  | [optional] 
-**field** | **int** |  | [optional] 
+**var_field** | **int** |  | [optional] 
 
 ## Example
 
@@ -35,12 +35,12 @@ json = "{}"
 # create an instance of AgentDeviceMapping from a JSON string
 agent_device_mapping_instance = AgentDeviceMapping.from_json(json)
 # print the JSON string representation of the object
-print AgentDeviceMapping.to_json()
+print(AgentDeviceMapping.to_json())
 
 # convert the object into a dict
 agent_device_mapping_dict = agent_device_mapping_instance.to_dict()
 # create an instance of AgentDeviceMapping from a dict
-agent_device_mapping_form_dict = agent_device_mapping.from_dict(agent_device_mapping_dict)
+agent_device_mapping_from_dict = AgentDeviceMapping.from_dict(agent_device_mapping_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

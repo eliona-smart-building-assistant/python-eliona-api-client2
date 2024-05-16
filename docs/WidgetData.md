@@ -21,12 +21,12 @@ json = "{}"
 # create an instance of WidgetData from a JSON string
 widget_data_instance = WidgetData.from_json(json)
 # print the JSON string representation of the object
-print WidgetData.to_json()
+print(WidgetData.to_json())
 
 # convert the object into a dict
 widget_data_dict = widget_data_instance.to_dict()
 # create an instance of WidgetData from a dict
-widget_data_form_dict = widget_data.from_dict(widget_data_dict)
+widget_data_from_dict = WidgetData.from_dict(widget_data_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

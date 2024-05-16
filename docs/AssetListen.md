@@ -36,12 +36,12 @@ json = "{}"
 # create an instance of AssetListen from a JSON string
 asset_listen_instance = AssetListen.from_json(json)
 # print the JSON string representation of the object
-print AssetListen.to_json()
+print(AssetListen.to_json())
 
 # convert the object into a dict
 asset_listen_dict = asset_listen_instance.to_dict()
 # create an instance of AssetListen from a dict
-asset_listen_form_dict = asset_listen.from_dict(asset_listen_dict)
+asset_listen_from_dict = AssetListen.from_dict(asset_listen_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

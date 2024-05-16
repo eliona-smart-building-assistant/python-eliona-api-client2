@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictBool, StrictFloat, StrictInt, StrictStr, field_validator
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from typing_extensions import Annotated
 from eliona.api_client2.models.data_subtype import DataSubtype
@@ -75,11 +75,11 @@ class AssetTypeAttribute(BaseModel):
                 raise ValueError("each list item must be one of ('S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S10', 'S12', 'S15', 'S20', 'S30', 'M1', 'M2', 'M3', 'M4', 'M5', 'M6', 'M10', 'M12', 'M15', 'M20', 'M30', 'H1', 'H2', 'H3', 'H4', 'H6', 'H8', 'H12', 'DAY', 'WEEK', 'MONTH', 'QUARTER', 'YEAR', 'DECADE', 'CENTURY')")
         return value
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

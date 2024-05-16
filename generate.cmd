@@ -1,6 +1,6 @@
 docker run --rm ^
     -v "%cd%":/local ^
-    openapitools/openapi-generator-cli:v7.3.0 ^
+    openapitools/openapi-generator-cli:v7.5.0 ^
     generate ^
     -g python ^
     --git-user-id eliona-smart-building-assistant ^

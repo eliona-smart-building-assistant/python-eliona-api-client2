@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import datetime
-from pydantic import BaseModel, Field, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from eliona.api_client2.models.data_subtype import DataSubtype
 from typing import Optional, Set
@@ -37,11 +37,11 @@ class Data(BaseModel):
     client_reference: Optional[StrictStr] = Field(default=None, description="freely assignable by the client to identify self-created data", alias="clientReference")
     __properties: ClassVar[List[str]] = ["assetId", "subtype", "timestamp", "data", "assetTypeName", "clientReference"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

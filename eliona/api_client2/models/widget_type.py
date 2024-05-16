@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictBool, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from eliona.api_client2.models.translation import Translation
 from eliona.api_client2.models.widget_type_element import WidgetTypeElement
@@ -39,11 +39,11 @@ class WidgetType(BaseModel):
     elements: List[WidgetTypeElement] = Field(description="A list of elements for this widget (order matches the order of elements for this type)")
     __properties: ClassVar[List[str]] = ["id", "name", "custom", "translation", "icon", "withAlarm", "withTimespan", "elements"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

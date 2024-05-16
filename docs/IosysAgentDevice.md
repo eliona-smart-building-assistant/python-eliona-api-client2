@@ -25,12 +25,12 @@ json = "{}"
 # create an instance of IosysAgentDevice from a JSON string
 iosys_agent_device_instance = IosysAgentDevice.from_json(json)
 # print the JSON string representation of the object
-print IosysAgentDevice.to_json()
+print(IosysAgentDevice.to_json())
 
 # convert the object into a dict
 iosys_agent_device_dict = iosys_agent_device_instance.to_dict()
 # create an instance of IosysAgentDevice from a dict
-iosys_agent_device_form_dict = iosys_agent_device.from_dict(iosys_agent_device_dict)
+iosys_agent_device_from_dict = IosysAgentDevice.from_dict(iosys_agent_device_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

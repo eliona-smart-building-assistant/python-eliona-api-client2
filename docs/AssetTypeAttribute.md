@@ -39,12 +39,12 @@ json = "{}"
 # create an instance of AssetTypeAttribute from a JSON string
 asset_type_attribute_instance = AssetTypeAttribute.from_json(json)
 # print the JSON string representation of the object
-print AssetTypeAttribute.to_json()
+print(AssetTypeAttribute.to_json())
 
 # convert the object into a dict
 asset_type_attribute_dict = asset_type_attribute_instance.to_dict()
 # create an instance of AssetTypeAttribute from a dict
-asset_type_attribute_form_dict = asset_type_attribute.from_dict(asset_type_attribute_dict)
+asset_type_attribute_from_dict = AssetTypeAttribute.from_dict(asset_type_attribute_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

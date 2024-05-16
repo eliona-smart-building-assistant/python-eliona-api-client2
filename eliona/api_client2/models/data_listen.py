@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import datetime
-from pydantic import BaseModel, Field, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from eliona.api_client2.models.data_subtype import DataSubtype
 from typing import Optional, Set
@@ -38,11 +38,11 @@ class DataListen(BaseModel):
     status_code: Optional[StrictInt] = Field(default=None, description="The status code expecting when actually perform the operation. Some values are - 200: updated (ok)  - 201: created - 204: deleted (no content) - 304: unchanged (not modified) - 400: problem (bad request) - 404: not found - 409: duplicated (conflict) - 422: unprocessable ", alias="statusCode")
     __properties: ClassVar[List[str]] = ["assetId", "subtype", "timestamp", "data", "assetTypeName", "clientReference", "statusCode"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

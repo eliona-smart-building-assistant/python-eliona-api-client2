@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from eliona.api_client2.models.widget_data import WidgetData
 from typing import Optional, Set
@@ -36,11 +36,11 @@ class Widget(BaseModel):
     data: Optional[List[WidgetData]] = Field(default=None, description="List of data for the elements of widget")
     __properties: ClassVar[List[str]] = ["id", "widgetTypeName", "details", "assetId", "sequence", "data"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

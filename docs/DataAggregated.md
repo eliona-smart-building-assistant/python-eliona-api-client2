@@ -32,12 +32,12 @@ json = "{}"
 # create an instance of DataAggregated from a JSON string
 data_aggregated_instance = DataAggregated.from_json(json)
 # print the JSON string representation of the object
-print DataAggregated.to_json()
+print(DataAggregated.to_json())
 
 # convert the object into a dict
 data_aggregated_dict = data_aggregated_instance.to_dict()
 # create an instance of DataAggregated from a dict
-data_aggregated_form_dict = data_aggregated.from_dict(data_aggregated_dict)
+data_aggregated_from_dict = DataAggregated.from_dict(data_aggregated_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

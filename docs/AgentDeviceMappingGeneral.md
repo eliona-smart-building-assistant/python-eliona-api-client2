@@ -24,12 +24,12 @@ json = "{}"
 # create an instance of AgentDeviceMappingGeneral from a JSON string
 agent_device_mapping_general_instance = AgentDeviceMappingGeneral.from_json(json)
 # print the JSON string representation of the object
-print AgentDeviceMappingGeneral.to_json()
+print(AgentDeviceMappingGeneral.to_json())
 
 # convert the object into a dict
 agent_device_mapping_general_dict = agent_device_mapping_general_instance.to_dict()
 # create an instance of AgentDeviceMappingGeneral from a dict
-agent_device_mapping_general_form_dict = agent_device_mapping_general.from_dict(agent_device_mapping_general_dict)
+agent_device_mapping_general_from_dict = AgentDeviceMappingGeneral.from_dict(agent_device_mapping_general_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

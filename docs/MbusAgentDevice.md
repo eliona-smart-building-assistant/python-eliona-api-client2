@@ -30,12 +30,12 @@ json = "{}"
 # create an instance of MbusAgentDevice from a JSON string
 mbus_agent_device_instance = MbusAgentDevice.from_json(json)
 # print the JSON string representation of the object
-print MbusAgentDevice.to_json()
+print(MbusAgentDevice.to_json())
 
 # convert the object into a dict
 mbus_agent_device_dict = mbus_agent_device_instance.to_dict()
 # create an instance of MbusAgentDevice from a dict
-mbus_agent_device_form_dict = mbus_agent_device.from_dict(mbus_agent_device_dict)
+mbus_agent_device_from_dict = MbusAgentDevice.from_dict(mbus_agent_device_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
