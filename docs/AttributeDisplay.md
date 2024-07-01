@@ -28,12 +28,12 @@ json = "{}"
 # create an instance of AttributeDisplay from a JSON string
 attribute_display_instance = AttributeDisplay.from_json(json)
 # print the JSON string representation of the object
-print AttributeDisplay.to_json()
+print(AttributeDisplay.to_json())
 
 # convert the object into a dict
 attribute_display_dict = attribute_display_instance.to_dict()
 # create an instance of AttributeDisplay from a dict
-attribute_display_form_dict = attribute_display.from_dict(attribute_display_dict)
+attribute_display_from_dict = AttributeDisplay.from_dict(attribute_display_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import datetime
-from pydantic import BaseModel, Field, StrictBool, StrictFloat, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from eliona.api_client2.models.alarm_priority import AlarmPriority
 from eliona.api_client2.models.alarm_rule import AlarmRule
@@ -50,11 +50,11 @@ class Alarm(BaseModel):
     rule_info: Optional[AlarmRule] = Field(default=None, alias="ruleInfo")
     __properties: ClassVar[List[str]] = ["ruleId", "assetId", "subtype", "attribute", "priority", "requiresAcknowledge", "value", "timestamp", "goneTimestamp", "acknowledgeTimestamp", "occurrences", "acknowledgeText", "acknowledgeUserId", "message", "assetInfo", "ruleInfo"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

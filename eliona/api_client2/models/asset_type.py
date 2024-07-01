@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictBool, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from eliona.api_client2.models.asset_type_attribute import AssetTypeAttribute
 from eliona.api_client2.models.translation import Translation
@@ -42,11 +42,11 @@ class AssetType(BaseModel):
     attributes: Optional[List[AssetTypeAttribute]] = Field(default=None, description="List of named attributes")
     __properties: ClassVar[List[str]] = ["name", "custom", "vendor", "model", "translation", "urldoc", "icon", "payloadFunction", "allowedInactivity", "isTracker", "attributes"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

@@ -33,12 +33,12 @@ json = "{}"
 # create an instance of AlarmListen from a JSON string
 alarm_listen_instance = AlarmListen.from_json(json)
 # print the JSON string representation of the object
-print AlarmListen.to_json()
+print(AlarmListen.to_json())
 
 # convert the object into a dict
 alarm_listen_dict = alarm_listen_instance.to_dict()
 # create an instance of AlarmListen from a dict
-alarm_listen_form_dict = alarm_listen.from_dict(alarm_listen_dict)
+alarm_listen_from_dict = AlarmListen.from_dict(alarm_listen_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

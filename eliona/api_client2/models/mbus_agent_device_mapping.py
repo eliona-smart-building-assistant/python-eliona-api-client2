@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictBool, StrictFloat, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from eliona.api_client2.models.agent_class import AgentClass
 from eliona.api_client2.models.data_subtype import DataSubtype
@@ -36,16 +36,16 @@ class MbusAgentDeviceMapping(BaseModel):
     asset_id: Optional[StrictInt] = Field(default=None, description="ID of the corresponding asset", alias="assetId")
     subtype: DataSubtype
     attribute: StrictStr = Field(description="Name of the attribute to map")
-    field: Optional[StrictInt] = None
+    var_field: Optional[StrictInt] = Field(default=None, alias="field")
     scale: Optional[Union[StrictFloat, StrictInt]] = None
     zero: Optional[Union[StrictFloat, StrictInt]] = None
     __properties: ClassVar[List[str]] = ["class", "id", "deviceId", "enable", "assetId", "subtype", "attribute", "field", "scale", "zero"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -104,9 +104,9 @@ class MbusAgentDeviceMapping(BaseModel):
         if self.asset_id is None and "asset_id" in self.model_fields_set:
             _dict['assetId'] = None
 
-        # set to None if field (nullable) is None
+        # set to None if var_field (nullable) is None
         # and model_fields_set contains the field
-        if self.field is None and "field" in self.model_fields_set:
+        if self.var_field is None and "var_field" in self.model_fields_set:
             _dict['field'] = None
 
         # set to None if scale (nullable) is None

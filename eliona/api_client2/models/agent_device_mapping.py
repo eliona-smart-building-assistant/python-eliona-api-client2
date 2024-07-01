@@ -18,11 +18,11 @@ from inspect import getfullargspec
 import json
 import pprint
 import re  # noqa: F401
-from pydantic import BaseModel, Field, StrictStr, ValidationError, field_validator
+from pydantic import BaseModel, ConfigDict, Field, StrictStr, ValidationError, field_validator
 from typing import Optional
 from eliona.api_client2.models.iosys_agent_device_mapping import IosysAgentDeviceMapping
 from eliona.api_client2.models.mbus_agent_device_mapping import MbusAgentDeviceMapping
-from typing import Union, Any, List, TYPE_CHECKING, Optional, Dict
+from typing import Union, Any, List, Set, TYPE_CHECKING, Optional, Dict
 from typing_extensions import Literal, Self
 from pydantic import Field
 
@@ -41,7 +41,7 @@ class AgentDeviceMapping(BaseModel):
         actual_instance: Optional[Union[IosysAgentDeviceMapping, MbusAgentDeviceMapping]] = None
     else:
         actual_instance: Any = None
-    any_of_schemas: List[str] = Field(default=Literal["IosysAgentDeviceMapping", "MbusAgentDeviceMapping"])
+    any_of_schemas: Set[str] = { "IosysAgentDeviceMapping", "MbusAgentDeviceMapping" }
 
     model_config = {
         "validate_assignment": True,

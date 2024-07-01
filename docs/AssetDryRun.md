@@ -22,12 +22,12 @@ json = "{}"
 # create an instance of AssetDryRun from a JSON string
 asset_dry_run_instance = AssetDryRun.from_json(json)
 # print the JSON string representation of the object
-print AssetDryRun.to_json()
+print(AssetDryRun.to_json())
 
 # convert the object into a dict
 asset_dry_run_dict = asset_dry_run_instance.to_dict()
 # create an instance of AssetDryRun from a dict
-asset_dry_run_form_dict = asset_dry_run.from_dict(asset_dry_run_dict)
+asset_dry_run_from_dict = AssetDryRun.from_dict(asset_dry_run_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

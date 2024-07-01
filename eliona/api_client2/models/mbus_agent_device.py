@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictBool, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from eliona.api_client2.models.agent_class import AgentClass
 from typing import Optional, Set
@@ -44,11 +44,11 @@ class MbusAgentDevice(BaseModel):
     multi_frames: Optional[StrictInt] = Field(default=0, alias="multiFrames")
     __properties: ClassVar[List[str]] = ["class", "id", "agentId", "enable", "manufacturer", "model", "address", "secAddress", "raster", "maxFail", "maxRetry", "sendNke", "appResetSubcode", "multiFrames"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

@@ -27,10 +27,10 @@ class AlarmPriority(int, Enum):
     """
     allowed enum values
     """
-    NUMBER_1 = 1
-    NUMBER_2 = 2
-    NUMBER_3 = 3
-    NUMBER_10 = 10
+    ALARM_PRIORITY_HEIGHT = 1
+    ALARM_PRIORITY_MEDIUM = 2
+    ALARM_PRIORITY_LOW = 3
+    ALARM_PRIORITY_INFO = 10
 
     @classmethod
     def from_json(cls, json_str: str) -> Self:

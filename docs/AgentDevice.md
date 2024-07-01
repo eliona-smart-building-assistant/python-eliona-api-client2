@@ -35,12 +35,12 @@ json = "{}"
 # create an instance of AgentDevice from a JSON string
 agent_device_instance = AgentDevice.from_json(json)
 # print the JSON string representation of the object
-print AgentDevice.to_json()
+print(AgentDevice.to_json())
 
 # convert the object into a dict
 agent_device_dict = agent_device_instance.to_dict()
 # create an instance of AgentDevice from a dict
-agent_device_form_dict = agent_device.from_dict(agent_device_dict)
+agent_device_from_dict = AgentDevice.from_dict(agent_device_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

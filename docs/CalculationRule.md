@@ -25,12 +25,12 @@ json = "{}"
 # create an instance of CalculationRule from a JSON string
 calculation_rule_instance = CalculationRule.from_json(json)
 # print the JSON string representation of the object
-print CalculationRule.to_json()
+print(CalculationRule.to_json())
 
 # convert the object into a dict
 calculation_rule_dict = calculation_rule_instance.to_dict()
 # create an instance of CalculationRule from a dict
-calculation_rule_form_dict = calculation_rule.from_dict(calculation_rule_dict)
+calculation_rule_from_dict = CalculationRule.from_dict(calculation_rule_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

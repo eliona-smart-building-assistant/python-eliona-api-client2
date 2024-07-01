@@ -20,12 +20,12 @@ json = "{}"
 # create an instance of DryRunGeneral from a JSON string
 dry_run_general_instance = DryRunGeneral.from_json(json)
 # print the JSON string representation of the object
-print DryRunGeneral.to_json()
+print(DryRunGeneral.to_json())
 
 # convert the object into a dict
 dry_run_general_dict = dry_run_general_instance.to_dict()
 # create an instance of DryRunGeneral from a dict
-dry_run_general_form_dict = dry_run_general.from_dict(dry_run_general_dict)
+dry_run_general_from_dict = DryRunGeneral.from_dict(dry_run_general_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
