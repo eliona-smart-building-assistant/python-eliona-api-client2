@@ -1,6 +1,6 @@
 # AlarmPriority
 
-The priority of the alarm. The higher this value the higher the priority.
+The priority of the alarm. The lower this value the higher the priority.
 
 ## Properties
 
