@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **precision** | **int** | Number of decimal places | [optional] 
 **min** | **float** | Lower limit | [optional] 
 **max** | **float** | Upper limit | [optional] 
-**aggregation_mode** | **str** | Aggregation calculation mode | [optional] 
+**aggregation_mode** | **str** | Deprecated: Use the &#39;GET /data-trend-aggregated&#39; endpoint to retrieve aggregated data for periodic rasters without defining aggregations. Aggregation calculation mode.  | [optional] 
 **aggregation_rasters** | **List[str]** |  | [optional] 
 **viewer** | **bool** | Should the attribute be displayed in viewer | [optional] [default to False]
 **ar** | **bool** | Should the attribute be displayed in AR | [optional] [default to False]

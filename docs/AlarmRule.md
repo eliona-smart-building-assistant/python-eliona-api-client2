@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **tags** | **List[str]** | List of associated tags | [optional] 
 **subject** | **str** | The subject for the alarm | [optional] 
 **urldoc** | **str** | The url describing the alarm | [optional] 
+**params** | **object** | Parameter for aggregated alarms | [optional] 
 **notify_on** | **str** | Notification | [optional] 
 **dont_mask** | **bool** | Do not mask | [optional] [default to False]
 **check_type** | **str** | Check type | [optional] 

@@ -21,6 +21,8 @@ Name | Type | Description | Notes
 **functional_asset_id_path** | **List[int]** | The hierarchical path of functional ids of the asset | [optional] [readonly] 
 **parent_locational_asset_id** | **int** | The id of an asset which groups this asset as a locational child | [optional] 
 **locational_asset_id_path** | **List[int]** | The hierarchical path of locational ids of the asset | [optional] [readonly] 
+**parent_functional_identifier** | **str** | The identifier specified by the identifiedBy parameter classifies this asset as a functional child. | [optional] 
+**parent_locational_identifier** | **str** | The identifier specified by the identifiedBy parameter classifies this asset as a locational child | [optional] 
 **tags** | **List[str]** | List of associated tags | [optional] 
 **children_info** | [**List[Asset]**](Asset.md) | List of children for this asset. | [optional] [readonly] 
 **attachments** | [**List[Attachment]**](Attachment.md) | A list of files attached to the asset | [optional] 
