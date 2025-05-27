@@ -111,7 +111,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_agent_device_by_id**
-> List[AgentDevice] get_agent_device_by_id(agent_class, agent_device_id)
+> List[IosysAgentDevice] get_agent_device_by_id(agent_class, agent_device_id)
 
 Information about agent device
 
@@ -124,7 +124,7 @@ Gets information about agent device.
 
 ```python
 import eliona.api_client2
-from eliona.api_client2.models.agent_device import AgentDevice
+from eliona.api_client2.models.iosys_agent_device import IosysAgentDevice
 from eliona.api_client2.rest import ApiException
 from pprint import pprint
 
@@ -178,7 +178,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List[AgentDevice]**](AgentDevice.md)
+[**List[IosysAgentDevice]**](IosysAgentDevice.md)
 
 ### Authorization
 
@@ -198,7 +198,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_agent_device_mapping_by_id**
-> List[AgentDeviceMapping] get_agent_device_mapping_by_id(agent_class, agent_device_mapping_id)
+> List[IosysAgentDeviceMapping] get_agent_device_mapping_by_id(agent_class, agent_device_mapping_id)
 
 Information about agent device mapping
 
@@ -211,7 +211,7 @@ Gets information about agent device mapping.
 
 ```python
 import eliona.api_client2
-from eliona.api_client2.models.agent_device_mapping import AgentDeviceMapping
+from eliona.api_client2.models.iosys_agent_device_mapping import IosysAgentDeviceMapping
 from eliona.api_client2.rest import ApiException
 from pprint import pprint
 
@@ -265,7 +265,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List[AgentDeviceMapping]**](AgentDeviceMapping.md)
+[**List[IosysAgentDeviceMapping]**](IosysAgentDeviceMapping.md)
 
 ### Authorization
 
@@ -285,7 +285,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_agent_device_mappings_by_device_id**
-> List[AgentDeviceMapping] get_agent_device_mappings_by_device_id(agent_class, agent_device_id)
+> List[IosysAgentDeviceMapping] get_agent_device_mappings_by_device_id(agent_class, agent_device_id)
 
 Information about agent device mappings
 
@@ -298,7 +298,7 @@ Gets information about mappings between agent and eliona.
 
 ```python
 import eliona.api_client2
-from eliona.api_client2.models.agent_device_mapping import AgentDeviceMapping
+from eliona.api_client2.models.iosys_agent_device_mapping import IosysAgentDeviceMapping
 from eliona.api_client2.rest import ApiException
 from pprint import pprint
 
@@ -352,7 +352,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List[AgentDeviceMapping]**](AgentDeviceMapping.md)
+[**List[IosysAgentDeviceMapping]**](IosysAgentDeviceMapping.md)
 
 ### Authorization
 
@@ -372,7 +372,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_agent_devices_by_agent_id**
-> List[AgentDevice] get_agent_devices_by_agent_id(agent_class, agent_id)
+> List[IosysAgentDevice] get_agent_devices_by_agent_id(agent_class, agent_id)
 
 Information about agent devices
 
@@ -385,7 +385,7 @@ Gets information about agent devices.
 
 ```python
 import eliona.api_client2
-from eliona.api_client2.models.agent_device import AgentDevice
+from eliona.api_client2.models.iosys_agent_device import IosysAgentDevice
 from eliona.api_client2.rest import ApiException
 from pprint import pprint
 
@@ -439,7 +439,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List[AgentDevice]**](AgentDevice.md)
+[**List[IosysAgentDevice]**](IosysAgentDevice.md)
 
 ### Authorization
 
@@ -712,7 +712,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **post_agent_device_by_agent_id**
-> AgentDevice post_agent_device_by_agent_id(agent_class, agent_id, agent_device)
+> IosysAgentDevice post_agent_device_by_agent_id(agent_class, agent_id, body)
 
 Create an agent device
 
@@ -725,7 +725,7 @@ Create a new agent device.
 
 ```python
 import eliona.api_client2
-from eliona.api_client2.models.agent_device import AgentDevice
+from eliona.api_client2.models.iosys_agent_device import IosysAgentDevice
 from eliona.api_client2.rest import ApiException
 from pprint import pprint
 
@@ -757,11 +757,11 @@ with eliona.api_client2.ApiClient(configuration) as api_client:
     api_instance = eliona.api_client2.AgentsApi(api_client)
     agent_class = 'iosys' # str | The class of an agent
     agent_id = 4711 # int | The id of the agent
-    agent_device = eliona.api_client2.AgentDevice() # AgentDevice | 
+    body = eliona.api_client2.IosysAgentDevice() # IosysAgentDevice | 
 
     try:
         # Create an agent device
-        api_response = api_instance.post_agent_device_by_agent_id(agent_class, agent_id, agent_device)
+        api_response = api_instance.post_agent_device_by_agent_id(agent_class, agent_id, body)
         print("The response of AgentsApi->post_agent_device_by_agent_id:\n")
         pprint(api_response)
     except Exception as e:
@@ -777,11 +777,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **agent_class** | **str**| The class of an agent | 
  **agent_id** | **int**| The id of the agent | 
- **agent_device** | [**AgentDevice**](AgentDevice.md)|  | 
+ **body** | **IosysAgentDevice**|  | 
 
 ### Return type
 
-[**AgentDevice**](AgentDevice.md)
+[**IosysAgentDevice**](IosysAgentDevice.md)
 
 ### Authorization
 
@@ -801,7 +801,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **post_agent_device_mapping_by_device_id**
-> AgentDeviceMapping post_agent_device_mapping_by_device_id(agent_class, agent_device_id, agent_device_mapping)
+> IosysAgentDeviceMapping post_agent_device_mapping_by_device_id(agent_class, agent_device_id, body)
 
 Create an agent device mapping
 
@@ -814,7 +814,7 @@ Create a new agent device mapping.
 
 ```python
 import eliona.api_client2
-from eliona.api_client2.models.agent_device_mapping import AgentDeviceMapping
+from eliona.api_client2.models.iosys_agent_device_mapping import IosysAgentDeviceMapping
 from eliona.api_client2.rest import ApiException
 from pprint import pprint
 
@@ -846,11 +846,11 @@ with eliona.api_client2.ApiClient(configuration) as api_client:
     api_instance = eliona.api_client2.AgentsApi(api_client)
     agent_class = 'iosys' # str | The class of an agent
     agent_device_id = 4711 # int | The id of the device
-    agent_device_mapping = eliona.api_client2.AgentDeviceMapping() # AgentDeviceMapping | 
+    body = eliona.api_client2.IosysAgentDeviceMapping() # IosysAgentDeviceMapping | 
 
     try:
         # Create an agent device mapping
-        api_response = api_instance.post_agent_device_mapping_by_device_id(agent_class, agent_device_id, agent_device_mapping)
+        api_response = api_instance.post_agent_device_mapping_by_device_id(agent_class, agent_device_id, body)
         print("The response of AgentsApi->post_agent_device_mapping_by_device_id:\n")
         pprint(api_response)
     except Exception as e:
@@ -866,11 +866,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **agent_class** | **str**| The class of an agent | 
  **agent_device_id** | **int**| The id of the device | 
- **agent_device_mapping** | [**AgentDeviceMapping**](AgentDeviceMapping.md)|  | 
+ **body** | **IosysAgentDeviceMapping**|  | 
 
 ### Return type
 
-[**AgentDeviceMapping**](AgentDeviceMapping.md)
+[**IosysAgentDeviceMapping**](IosysAgentDeviceMapping.md)
 
 ### Authorization
 
@@ -1067,7 +1067,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **put_agent_device_by_agent_id**
-> AgentDevice put_agent_device_by_agent_id(agent_class, agent_id, agent_device)
+> IosysAgentDevice put_agent_device_by_agent_id(agent_class, agent_id, body)
 
 Create or update an agent device
 
@@ -1080,7 +1080,7 @@ Deprecated - use POST /agents/{agent-class}/{agent-id}/devices for creating and 
 
 ```python
 import eliona.api_client2
-from eliona.api_client2.models.agent_device import AgentDevice
+from eliona.api_client2.models.iosys_agent_device import IosysAgentDevice
 from eliona.api_client2.rest import ApiException
 from pprint import pprint
 
@@ -1112,11 +1112,11 @@ with eliona.api_client2.ApiClient(configuration) as api_client:
     api_instance = eliona.api_client2.AgentsApi(api_client)
     agent_class = 'iosys' # str | The class of an agent
     agent_id = 4711 # int | The id of the agent
-    agent_device = eliona.api_client2.AgentDevice() # AgentDevice | 
+    body = eliona.api_client2.IosysAgentDevice() # IosysAgentDevice | 
 
     try:
         # Create or update an agent device
-        api_response = api_instance.put_agent_device_by_agent_id(agent_class, agent_id, agent_device)
+        api_response = api_instance.put_agent_device_by_agent_id(agent_class, agent_id, body)
         print("The response of AgentsApi->put_agent_device_by_agent_id:\n")
         pprint(api_response)
     except Exception as e:
@@ -1132,11 +1132,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **agent_class** | **str**| The class of an agent | 
  **agent_id** | **int**| The id of the agent | 
- **agent_device** | [**AgentDevice**](AgentDevice.md)|  | 
+ **body** | **IosysAgentDevice**|  | 
 
 ### Return type
 
-[**AgentDevice**](AgentDevice.md)
+[**IosysAgentDevice**](IosysAgentDevice.md)
 
 ### Authorization
 
@@ -1156,7 +1156,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **put_agent_device_by_id**
-> AgentDevice put_agent_device_by_id(agent_class, agent_device_id, agent_device)
+> IosysAgentDevice put_agent_device_by_id(agent_class, agent_device_id, body)
 
 Update an agent device
 
@@ -1169,7 +1169,7 @@ Update a new agent device.
 
 ```python
 import eliona.api_client2
-from eliona.api_client2.models.agent_device import AgentDevice
+from eliona.api_client2.models.iosys_agent_device import IosysAgentDevice
 from eliona.api_client2.rest import ApiException
 from pprint import pprint
 
@@ -1201,11 +1201,11 @@ with eliona.api_client2.ApiClient(configuration) as api_client:
     api_instance = eliona.api_client2.AgentsApi(api_client)
     agent_class = 'iosys' # str | The class of an agent
     agent_device_id = 4711 # int | The id of the device
-    agent_device = eliona.api_client2.AgentDevice() # AgentDevice | 
+    body = eliona.api_client2.IosysAgentDevice() # IosysAgentDevice | 
 
     try:
         # Update an agent device
-        api_response = api_instance.put_agent_device_by_id(agent_class, agent_device_id, agent_device)
+        api_response = api_instance.put_agent_device_by_id(agent_class, agent_device_id, body)
         print("The response of AgentsApi->put_agent_device_by_id:\n")
         pprint(api_response)
     except Exception as e:
@@ -1221,11 +1221,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **agent_class** | **str**| The class of an agent | 
  **agent_device_id** | **int**| The id of the device | 
- **agent_device** | [**AgentDevice**](AgentDevice.md)|  | 
+ **body** | **IosysAgentDevice**|  | 
 
 ### Return type
 
-[**AgentDevice**](AgentDevice.md)
+[**IosysAgentDevice**](IosysAgentDevice.md)
 
 ### Authorization
 
@@ -1245,7 +1245,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **put_agent_device_mapping_by_device_id**
-> AgentDeviceMapping put_agent_device_mapping_by_device_id(agent_class, agent_device_id, agent_device_mapping)
+> IosysAgentDeviceMapping put_agent_device_mapping_by_device_id(agent_class, agent_device_id, body)
 
 Create or update an agent device mapping
 
@@ -1258,7 +1258,7 @@ Deprecated - Use POST /agent-devices/{agent-class}/{agent-device-id}/mappings fo
 
 ```python
 import eliona.api_client2
-from eliona.api_client2.models.agent_device_mapping import AgentDeviceMapping
+from eliona.api_client2.models.iosys_agent_device_mapping import IosysAgentDeviceMapping
 from eliona.api_client2.rest import ApiException
 from pprint import pprint
 
@@ -1290,11 +1290,11 @@ with eliona.api_client2.ApiClient(configuration) as api_client:
     api_instance = eliona.api_client2.AgentsApi(api_client)
     agent_class = 'iosys' # str | The class of an agent
     agent_device_id = 4711 # int | The id of the device
-    agent_device_mapping = eliona.api_client2.AgentDeviceMapping() # AgentDeviceMapping | 
+    body = eliona.api_client2.IosysAgentDeviceMapping() # IosysAgentDeviceMapping | 
 
     try:
         # Create or update an agent device mapping
-        api_response = api_instance.put_agent_device_mapping_by_device_id(agent_class, agent_device_id, agent_device_mapping)
+        api_response = api_instance.put_agent_device_mapping_by_device_id(agent_class, agent_device_id, body)
         print("The response of AgentsApi->put_agent_device_mapping_by_device_id:\n")
         pprint(api_response)
     except Exception as e:
@@ -1310,11 +1310,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **agent_class** | **str**| The class of an agent | 
  **agent_device_id** | **int**| The id of the device | 
- **agent_device_mapping** | [**AgentDeviceMapping**](AgentDeviceMapping.md)|  | 
+ **body** | **IosysAgentDeviceMapping**|  | 
 
 ### Return type
 
-[**AgentDeviceMapping**](AgentDeviceMapping.md)
+[**IosysAgentDeviceMapping**](IosysAgentDeviceMapping.md)
 
 ### Authorization
 
@@ -1334,7 +1334,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **put_agent_device_mapping_by_id**
-> AgentDeviceMapping put_agent_device_mapping_by_id(agent_class, agent_device_mapping_id, agent_device_mapping)
+> IosysAgentDeviceMapping put_agent_device_mapping_by_id(agent_class, agent_device_mapping_id, body)
 
 Update an agent device mapping
 
@@ -1347,7 +1347,7 @@ Update a new agent device mapping.
 
 ```python
 import eliona.api_client2
-from eliona.api_client2.models.agent_device_mapping import AgentDeviceMapping
+from eliona.api_client2.models.iosys_agent_device_mapping import IosysAgentDeviceMapping
 from eliona.api_client2.rest import ApiException
 from pprint import pprint
 
@@ -1379,11 +1379,11 @@ with eliona.api_client2.ApiClient(configuration) as api_client:
     api_instance = eliona.api_client2.AgentsApi(api_client)
     agent_class = 'iosys' # str | The class of an agent
     agent_device_mapping_id = 4711 # int | The id of the device mapping
-    agent_device_mapping = eliona.api_client2.AgentDeviceMapping() # AgentDeviceMapping | 
+    body = eliona.api_client2.IosysAgentDeviceMapping() # IosysAgentDeviceMapping | 
 
     try:
         # Update an agent device mapping
-        api_response = api_instance.put_agent_device_mapping_by_id(agent_class, agent_device_mapping_id, agent_device_mapping)
+        api_response = api_instance.put_agent_device_mapping_by_id(agent_class, agent_device_mapping_id, body)
         print("The response of AgentsApi->put_agent_device_mapping_by_id:\n")
         pprint(api_response)
     except Exception as e:
@@ -1399,11 +1399,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **agent_class** | **str**| The class of an agent | 
  **agent_device_mapping_id** | **int**| The id of the device mapping | 
- **agent_device_mapping** | [**AgentDeviceMapping**](AgentDeviceMapping.md)|  | 
+ **body** | **IosysAgentDeviceMapping**|  | 
 
 ### Return type
 
-[**AgentDeviceMapping**](AgentDeviceMapping.md)
+[**IosysAgentDeviceMapping**](IosysAgentDeviceMapping.md)
 
 ### Authorization
 

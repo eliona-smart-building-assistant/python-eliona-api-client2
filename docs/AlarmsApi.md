@@ -187,7 +187,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_alarm_history_by_id**
-> List[Alarm] get_alarm_history_by_id(alarm_rule_id, expansions=expansions)
+> List[Alarm] get_alarm_history_by_id(alarm_rule_id, from_date=from_date, to_date=to_date, tags=tags, expansions=expansions)
 
 Information about alarm history
 
@@ -231,11 +231,14 @@ with eliona.api_client2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = eliona.api_client2.AlarmsApi(api_client)
     alarm_rule_id = 4711 # int | The id of the alarm rule
+    from_date = '2020-01-01T09:00:00.000Z' # str | Filter by lower date time (RFC3339) limit inclusive (optional)
+    to_date = '2021-12-31T23:00:00.000Z' # str | Filter by upper date time (RFC3339) limit exclusive (optional)
+    tags = ['tags_example'] # List[str] | A list of defined tags. Result must include all of these tags, not just some. (optional)
     expansions = ['expansions_example'] # List[str] | List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows 'ObjectName.fieldName'. (optional)
 
     try:
         # Information about alarm history
-        api_response = api_instance.get_alarm_history_by_id(alarm_rule_id, expansions=expansions)
+        api_response = api_instance.get_alarm_history_by_id(alarm_rule_id, from_date=from_date, to_date=to_date, tags=tags, expansions=expansions)
         print("The response of AlarmsApi->get_alarm_history_by_id:\n")
         pprint(api_response)
     except Exception as e:
@@ -250,6 +253,9 @@ with eliona.api_client2.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **alarm_rule_id** | **int**| The id of the alarm rule | 
+ **from_date** | **str**| Filter by lower date time (RFC3339) limit inclusive | [optional] 
+ **to_date** | **str**| Filter by upper date time (RFC3339) limit exclusive | [optional] 
+ **tags** | [**List[str]**](str.md)| A list of defined tags. Result must include all of these tags, not just some. | [optional] 
  **expansions** | [**List[str]**](str.md)| List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows &#39;ObjectName.fieldName&#39;. | [optional] 
 
 ### Return type
@@ -274,7 +280,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_alarms**
-> List[Alarm] get_alarms(project_id=project_id, expansions=expansions)
+> List[Alarm] get_alarms(project_id=project_id, from_date=from_date, to_date=to_date, tags=tags, expansions=expansions)
 
 Information about alarms
 
@@ -318,11 +324,14 @@ with eliona.api_client2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = eliona.api_client2.AlarmsApi(api_client)
     project_id = 'project_id_example' # str | Filter for a specific project (optional)
+    from_date = '2020-01-01T09:00:00.000Z' # str | Filter by lower date time (RFC3339) limit inclusive (optional)
+    to_date = '2021-12-31T23:00:00.000Z' # str | Filter by upper date time (RFC3339) limit exclusive (optional)
+    tags = ['tags_example'] # List[str] | A list of defined tags. Result must include all of these tags, not just some. (optional)
     expansions = ['expansions_example'] # List[str] | List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows 'ObjectName.fieldName'. (optional)
 
     try:
         # Information about alarms
-        api_response = api_instance.get_alarms(project_id=project_id, expansions=expansions)
+        api_response = api_instance.get_alarms(project_id=project_id, from_date=from_date, to_date=to_date, tags=tags, expansions=expansions)
         print("The response of AlarmsApi->get_alarms:\n")
         pprint(api_response)
     except Exception as e:
@@ -337,6 +346,9 @@ with eliona.api_client2.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **project_id** | **str**| Filter for a specific project | [optional] 
+ **from_date** | **str**| Filter by lower date time (RFC3339) limit inclusive | [optional] 
+ **to_date** | **str**| Filter by upper date time (RFC3339) limit exclusive | [optional] 
+ **tags** | [**List[str]**](str.md)| A list of defined tags. Result must include all of these tags, not just some. | [optional] 
  **expansions** | [**List[str]**](str.md)| List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows &#39;ObjectName.fieldName&#39;. | [optional] 
 
 ### Return type
@@ -361,7 +373,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_alarms_history**
-> List[Alarm] get_alarms_history(project_id=project_id, expansions=expansions)
+> List[Alarm] get_alarms_history(project_id=project_id, from_date=from_date, to_date=to_date, tags=tags, expansions=expansions)
 
 Information about alarms history
 
@@ -405,11 +417,14 @@ with eliona.api_client2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = eliona.api_client2.AlarmsApi(api_client)
     project_id = 'project_id_example' # str | Filter for a specific project (optional)
+    from_date = '2020-01-01T09:00:00.000Z' # str | Filter by lower date time (RFC3339) limit inclusive (optional)
+    to_date = '2021-12-31T23:00:00.000Z' # str | Filter by upper date time (RFC3339) limit exclusive (optional)
+    tags = ['tags_example'] # List[str] | A list of defined tags. Result must include all of these tags, not just some. (optional)
     expansions = ['expansions_example'] # List[str] | List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows 'ObjectName.fieldName'. (optional)
 
     try:
         # Information about alarms history
-        api_response = api_instance.get_alarms_history(project_id=project_id, expansions=expansions)
+        api_response = api_instance.get_alarms_history(project_id=project_id, from_date=from_date, to_date=to_date, tags=tags, expansions=expansions)
         print("The response of AlarmsApi->get_alarms_history:\n")
         pprint(api_response)
     except Exception as e:
@@ -424,6 +439,9 @@ with eliona.api_client2.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **project_id** | **str**| Filter for a specific project | [optional] 
+ **from_date** | **str**| Filter by lower date time (RFC3339) limit inclusive | [optional] 
+ **to_date** | **str**| Filter by upper date time (RFC3339) limit exclusive | [optional] 
+ **tags** | [**List[str]**](str.md)| A list of defined tags. Result must include all of these tags, not just some. | [optional] 
  **expansions** | [**List[str]**](str.md)| List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows &#39;ObjectName.fieldName&#39;. | [optional] 
 
 ### Return type
@@ -448,7 +466,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_highest_alarms**
-> List[Alarm] get_highest_alarms(project_id=project_id, expansions=expansions)
+> List[Alarm] get_highest_alarms(project_id=project_id, from_date=from_date, to_date=to_date, tags=tags, expansions=expansions)
 
 Information about most prioritized alarms
 
@@ -492,11 +510,14 @@ with eliona.api_client2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = eliona.api_client2.AlarmsApi(api_client)
     project_id = 'project_id_example' # str | Filter for a specific project (optional)
+    from_date = '2020-01-01T09:00:00.000Z' # str | Filter by lower date time (RFC3339) limit inclusive (optional)
+    to_date = '2021-12-31T23:00:00.000Z' # str | Filter by upper date time (RFC3339) limit exclusive (optional)
+    tags = ['tags_example'] # List[str] | A list of defined tags. Result must include all of these tags, not just some. (optional)
     expansions = ['expansions_example'] # List[str] | List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows 'ObjectName.fieldName'. (optional)
 
     try:
         # Information about most prioritized alarms
-        api_response = api_instance.get_highest_alarms(project_id=project_id, expansions=expansions)
+        api_response = api_instance.get_highest_alarms(project_id=project_id, from_date=from_date, to_date=to_date, tags=tags, expansions=expansions)
         print("The response of AlarmsApi->get_highest_alarms:\n")
         pprint(api_response)
     except Exception as e:
@@ -511,6 +532,9 @@ with eliona.api_client2.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **project_id** | **str**| Filter for a specific project | [optional] 
+ **from_date** | **str**| Filter by lower date time (RFC3339) limit inclusive | [optional] 
+ **to_date** | **str**| Filter by upper date time (RFC3339) limit exclusive | [optional] 
+ **tags** | [**List[str]**](str.md)| A list of defined tags. Result must include all of these tags, not just some. | [optional] 
  **expansions** | [**List[str]**](str.md)| List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows &#39;ObjectName.fieldName&#39;. | [optional] 
 
 ### Return type
@@ -535,7 +559,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listen_alarm**
-> AlarmListen listen_alarm()
+> AlarmListen listen_alarm(expansions=expansions)
 
 WebSocket connection for alarm changes
 
@@ -578,10 +602,11 @@ configuration = eliona.api_client2.Configuration(
 with eliona.api_client2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = eliona.api_client2.AlarmsApi(api_client)
+    expansions = ['expansions_example'] # List[str] | List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows 'ObjectName.fieldName'. (optional)
 
     try:
         # WebSocket connection for alarm changes
-        api_response = api_instance.listen_alarm()
+        api_response = api_instance.listen_alarm(expansions=expansions)
         print("The response of AlarmsApi->listen_alarm:\n")
         pprint(api_response)
     except Exception as e:
@@ -592,7 +617,10 @@ with eliona.api_client2.ApiClient(configuration) as api_client:
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **expansions** | [**List[str]**](str.md)| List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows &#39;ObjectName.fieldName&#39;. | [optional] 
 
 ### Return type
 

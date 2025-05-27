@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **name** | **str** | Unique key of asset data | 
 **subtype** | [**DataSubtype**](DataSubtype.md) |  | 
 **type** | **str** | Name of the type for this attribute: air_quality, battery-voltage, brightness, co2, current, device-info, device-status, energy, flow, frequency, humidity, inputs-and-switches, level, motion, operating-status, people-count, power, presence, pressure, temperature, vehicle-detector, voltage, weather, voc | [optional] 
-**enable** | **bool** | Is data active or not | [optional] [default to True]
+**enable** | **bool** | Is data active or not | [optional] [default to False]
 **translation** | [**Translation**](Translation.md) |  | [optional] 
 **unit** | **str** | Physical unit of numeric data | [optional] 
 **precision** | **int** | Number of decimal places | [optional] 

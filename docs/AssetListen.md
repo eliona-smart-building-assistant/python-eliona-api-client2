@@ -24,6 +24,7 @@ Name | Type | Description | Notes
 **parent_functional_identifier** | **str** | The identifier specified by the identifiedBy parameter classifies this asset as a functional child. | [optional] 
 **parent_locational_identifier** | **str** | The identifier specified by the identifiedBy parameter classifies this asset as a locational child | [optional] 
 **tags** | **List[str]** | List of associated tags | [optional] 
+**allowed_inactivity** | **str** |  | [optional] 
 **children_info** | [**List[Asset]**](Asset.md) | List of children for this asset. | [optional] [readonly] 
 **attachments** | [**List[Attachment]**](Attachment.md) | A list of files attached to the asset | [optional] 
 **status_code** | **int** | The status code expecting when actually perform the operation. Some values are - 200: updated (ok)  - 201: created - 204: deleted (no content) - 304: unchanged (not modified) - 400: problem (bad request) - 404: not found - 409: duplicated (conflict) - 422: unprocessable  | [optional] 

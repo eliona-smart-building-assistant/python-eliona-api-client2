@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **acknowledge_text** | **str** | Text of acknowledgement | [optional] [readonly] 
 **acknowledge_user_id** | **str** | User who acknowledged the alarm | [optional] [readonly] 
 **message** | **object** | Message.yaml texts for alarm | 
+**acknowledge_user_info** | [**User**](User.md) |  | [optional] 
 **asset_info** | [**Asset**](Asset.md) |  | [optional] 
 **rule_info** | [**AlarmRule**](AlarmRule.md) |  | [optional] 
 **status_code** | **int** | The status code expecting when actually perform the operation. Some values are - 200: updated (ok)  - 201: created - 204: deleted (no content) - 304: unchanged (not modified) - 400: problem (bad request) - 404: not found - 409: duplicated (conflict) - 422: unprocessable  | [optional] 

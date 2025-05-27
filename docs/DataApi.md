@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**listen_data**](DataApi.md#listen_data) | **GET** /data-listener | WebSocket connection for asset data changes
 [**put_bulk_data**](DataApi.md#put_bulk_data) | **PUT** /data-bulk | Create or update multiple asset data
 [**put_data**](DataApi.md#put_data) | **PUT** /data | Create or update asset data
+[**put_data_trend**](DataApi.md#put_data_trend) | **PUT** /data-trend | Create or update historical data
 
 
 # **get_data**
@@ -747,6 +748,92 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | Successfully created a new or updated existing asset data |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **put_data_trend**
+> Data put_data_trend(data)
+
+Create or update historical data
+
+This creates or updates historical data. The choice between updating or creating depends on whether the historical  data for assetId, subtype, parameter and timestamp already exists. 
+
+### Example
+
+* Api Key Authentication (ApiKeyAuth):
+* Bearer (JWT) Authentication (BearerAuth):
+
+```python
+import eliona.api_client2
+from eliona.api_client2.models.data import Data
+from eliona.api_client2.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://name.eliona.io/v2
+# See configuration.py for a list of all supported configuration parameters.
+configuration = eliona.api_client2.Configuration(
+    host = "https://name.eliona.io/v2"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+
+# Configure Bearer authorization (JWT): BearerAuth
+configuration = eliona.api_client2.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with eliona.api_client2.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = eliona.api_client2.DataApi(api_client)
+    data = eliona.api_client2.Data() # Data | 
+
+    try:
+        # Create or update historical data
+        api_response = api_instance.put_data_trend(data)
+        print("The response of DataApi->put_data_trend:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling DataApi->put_data_trend: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **data** | [**Data**](Data.md)|  | 
+
+### Return type
+
+[**Data**](Data.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth), [BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successfully created a new or updated historical data |  -  |
+**422** | Issues arisen during the creation or updating |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

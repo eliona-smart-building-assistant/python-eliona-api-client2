@@ -23,16 +23,14 @@ from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
 
-class App(BaseModel):
+class ProjectUser(BaseModel):
     """
-    An app
+    A project user
     """ # noqa: E501
-    name: StrictStr = Field(description="Name of the app")
-    active: Optional[StrictBool] = Field(default=None, description="Is the app active or inactive")
-    registered: Optional[StrictBool] = Field(default=None, description="Is the app already registered or not")
-    metadata: Optional[Dict[str, Any]] = Field(default=None, description="Delivers the apps metadata to handle it in the app store")
-    version: Optional[StrictStr] = Field(default=None, description="the apps version")
-    __properties: ClassVar[List[str]] = ["name", "active", "registered", "metadata", "version"]
+    user_name: StrictStr = Field(description="The unique identifier for the user, represented as an email address.", alias="userName")
+    role_name: StrictStr = Field(description="The role assigned to the user within the project (e.g., readonly, admin, contributor).", alias="roleName")
+    enabled: Optional[StrictBool] = Field(default=None, description="Whether the user for this project is currently active (true) or disabled (false).")
+    __properties: ClassVar[List[str]] = ["userName", "roleName", "enabled"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -52,7 +50,7 @@ class App(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of App from a JSON string"""
+        """Create an instance of ProjectUser from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -73,31 +71,16 @@ class App(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # set to None if active (nullable) is None
+        # set to None if enabled (nullable) is None
         # and model_fields_set contains the field
-        if self.active is None and "active" in self.model_fields_set:
-            _dict['active'] = None
-
-        # set to None if registered (nullable) is None
-        # and model_fields_set contains the field
-        if self.registered is None and "registered" in self.model_fields_set:
-            _dict['registered'] = None
-
-        # set to None if metadata (nullable) is None
-        # and model_fields_set contains the field
-        if self.metadata is None and "metadata" in self.model_fields_set:
-            _dict['metadata'] = None
-
-        # set to None if version (nullable) is None
-        # and model_fields_set contains the field
-        if self.version is None and "version" in self.model_fields_set:
-            _dict['version'] = None
+        if self.enabled is None and "enabled" in self.model_fields_set:
+            _dict['enabled'] = None
 
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of App from a dict"""
+        """Create an instance of ProjectUser from a dict"""
         if obj is None:
             return None
 
@@ -105,11 +88,9 @@ class App(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "name": obj.get("name"),
-            "active": obj.get("active"),
-            "registered": obj.get("registered"),
-            "metadata": obj.get("metadata"),
-            "version": obj.get("version")
+            "userName": obj.get("userName"),
+            "roleName": obj.get("roleName"),
+            "enabled": obj.get("enabled")
         })
         return _obj
 

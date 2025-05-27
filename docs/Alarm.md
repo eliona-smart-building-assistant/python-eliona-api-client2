@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **acknowledge_text** | **str** | Text of acknowledgement | [optional] [readonly] 
 **acknowledge_user_id** | **str** | User who acknowledged the alarm | [optional] [readonly] 
 **message** | **object** | Message.yaml texts for alarm | 
+**acknowledge_user_info** | [**User**](User.md) |  | [optional] 
 **asset_info** | [**Asset**](Asset.md) |  | [optional] 
 **rule_info** | [**AlarmRule**](AlarmRule.md) |  | [optional] 
 

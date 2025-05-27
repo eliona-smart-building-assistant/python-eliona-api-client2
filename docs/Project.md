@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** | The internal ID of the project | [optional] [readonly] 
 **title** | **str** | The title of the project | [optional] 
+**users** | [**List[ProjectUser]**](ProjectUser.md) | List of users with a project role | [optional] 
 
 ## Example
 

@@ -18,21 +18,18 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
 
-class App(BaseModel):
+class ProjectRole(BaseModel):
     """
-    An app
+    A role that can assigned to users within a project
     """ # noqa: E501
-    name: StrictStr = Field(description="Name of the app")
-    active: Optional[StrictBool] = Field(default=None, description="Is the app active or inactive")
-    registered: Optional[StrictBool] = Field(default=None, description="Is the app already registered or not")
-    metadata: Optional[Dict[str, Any]] = Field(default=None, description="Delivers the apps metadata to handle it in the app store")
-    version: Optional[StrictStr] = Field(default=None, description="the apps version")
-    __properties: ClassVar[List[str]] = ["name", "active", "registered", "metadata", "version"]
+    id: Optional[StrictInt] = Field(default=None, description="The internal Id of role")
+    name: StrictStr = Field(description="Display name of the role")
+    __properties: ClassVar[List[str]] = ["id", "name"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -52,7 +49,7 @@ class App(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of App from a JSON string"""
+        """Create an instance of ProjectRole from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -64,8 +61,10 @@ class App(BaseModel):
         * `None` is only added to the output dict for nullable fields that
           were set at model initialization. Other fields with value `None`
           are ignored.
+        * OpenAPI `readOnly` fields are excluded.
         """
         excluded_fields: Set[str] = set([
+            "id",
         ])
 
         _dict = self.model_dump(
@@ -73,31 +72,16 @@ class App(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # set to None if active (nullable) is None
+        # set to None if id (nullable) is None
         # and model_fields_set contains the field
-        if self.active is None and "active" in self.model_fields_set:
-            _dict['active'] = None
-
-        # set to None if registered (nullable) is None
-        # and model_fields_set contains the field
-        if self.registered is None and "registered" in self.model_fields_set:
-            _dict['registered'] = None
-
-        # set to None if metadata (nullable) is None
-        # and model_fields_set contains the field
-        if self.metadata is None and "metadata" in self.model_fields_set:
-            _dict['metadata'] = None
-
-        # set to None if version (nullable) is None
-        # and model_fields_set contains the field
-        if self.version is None and "version" in self.model_fields_set:
-            _dict['version'] = None
+        if self.id is None and "id" in self.model_fields_set:
+            _dict['id'] = None
 
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of App from a dict"""
+        """Create an instance of ProjectRole from a dict"""
         if obj is None:
             return None
 
@@ -105,11 +89,8 @@ class App(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "name": obj.get("name"),
-            "active": obj.get("active"),
-            "registered": obj.get("registered"),
-            "metadata": obj.get("metadata"),
-            "version": obj.get("version")
+            "id": obj.get("id"),
+            "name": obj.get("name")
         })
         return _obj
 
