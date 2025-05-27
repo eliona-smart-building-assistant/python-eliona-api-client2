@@ -86,9 +86,9 @@ class WidgetType(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in elements (list)
         _items = []
         if self.elements:
-            for _item in self.elements:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_elements in self.elements:
+                if _item_elements:
+                    _items.append(_item_elements.to_dict())
             _dict['elements'] = _items
         # set to None if id (nullable) is None
         # and model_fields_set contains the field

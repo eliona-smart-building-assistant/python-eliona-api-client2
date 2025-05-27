@@ -118,7 +118,7 @@ class CalculationRule(BaseModel):
         _obj = cls.model_validate({
             "id": obj.get("id"),
             "assetId": obj.get("assetId"),
-            "subtype": obj.get("subtype"),
+            "subtype": obj.get("subtype") if obj.get("subtype") is not None else DataSubtype.NUMBER_SUBTYPE_INPUT,
             "attribute": obj.get("attribute"),
             "virtual": obj.get("virtual"),
             "formula": obj.get("formula"),

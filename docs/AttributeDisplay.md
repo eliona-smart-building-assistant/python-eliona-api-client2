@@ -7,7 +7,7 @@ How attributes are displayed for specific assets
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **asset_id** | **int** | ID of the corresponding asset | 
-**subtype** | [**DataSubtype**](DataSubtype.md) |  | 
+**subtype** | [**DataSubtype**](DataSubtype.md) |  | [default to DataSubtype.NUMBER_SUBTYPE_INPUT]
 **attribute** | **str** | Name of the attribute of the asset type | 
 **unit** | **str** | Physical unit of numeric data | [optional] 
 **precision** | **int** | Number of decimal places | [optional] 

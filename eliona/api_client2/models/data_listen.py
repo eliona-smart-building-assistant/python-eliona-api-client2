@@ -107,7 +107,7 @@ class DataListen(BaseModel):
 
         _obj = cls.model_validate({
             "assetId": obj.get("assetId"),
-            "subtype": obj.get("subtype"),
+            "subtype": obj.get("subtype") if obj.get("subtype") is not None else DataSubtype.NUMBER_SUBTYPE_INPUT,
             "timestamp": obj.get("timestamp"),
             "data": obj.get("data"),
             "assetTypeName": obj.get("assetTypeName"),

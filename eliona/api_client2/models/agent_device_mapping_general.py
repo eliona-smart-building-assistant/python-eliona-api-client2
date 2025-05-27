@@ -118,7 +118,7 @@ class AgentDeviceMappingGeneral(BaseModel):
             "deviceId": obj.get("deviceId"),
             "enable": obj.get("enable") if obj.get("enable") is not None else True,
             "assetId": obj.get("assetId"),
-            "subtype": obj.get("subtype"),
+            "subtype": obj.get("subtype") if obj.get("subtype") is not None else DataSubtype.NUMBER_SUBTYPE_INPUT,
             "attribute": obj.get("attribute")
         })
         return _obj

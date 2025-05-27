@@ -30,7 +30,7 @@ class DataTrendAggregated(BaseModel):
     Aggregated data with multiple data points for a periodical raster
     """ # noqa: E501
     asset_id: StrictInt = Field(description="ID of the corresponding asset", alias="assetId")
-    subtype: Optional[DataSubtype] = None
+    subtype: Optional[DataSubtype] = DataSubtype.NUMBER_SUBTYPE_INPUT
     attribute: Optional[StrictStr] = Field(default=None, description="Name of the attribute which holds the data points")
     timestamp: Optional[datetime] = Field(default=None, description="Timestamp of this aggregated data set. The timestamp when the timeslot based on raster starts.")
     count: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Count of data points in this aggregated data set")
@@ -134,7 +134,7 @@ class DataTrendAggregated(BaseModel):
 
         _obj = cls.model_validate({
             "assetId": obj.get("assetId"),
-            "subtype": obj.get("subtype"),
+            "subtype": obj.get("subtype") if obj.get("subtype") is not None else DataSubtype.NUMBER_SUBTYPE_INPUT,
             "attribute": obj.get("attribute"),
             "timestamp": obj.get("timestamp"),
             "count": obj.get("count"),

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **device_id** | **int** | The id of the device the mapping belongs to | [optional] [readonly] 
 **enable** | **bool** | Is the mapping enabled or not | [optional] [default to True]
 **asset_id** | **int** | ID of the corresponding asset | [optional] 
-**subtype** | [**DataSubtype**](DataSubtype.md) |  | 
+**subtype** | [**DataSubtype**](DataSubtype.md) |  | [default to DataSubtype.NUMBER_SUBTYPE_INPUT]
 **attribute** | **str** | Name of the attribute to map | 
 
 ## Example

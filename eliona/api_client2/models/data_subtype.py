@@ -27,11 +27,11 @@ class DataSubtype(str, Enum):
     """
     allowed enum values
     """
-    INPUT = 'input'
-    INFO = 'info'
-    STATUS = 'status'
-    OUTPUT = 'output'
-    PROPERTY = 'property'
+    SUBTYPE_INPUT = 'input'
+    SUBTYPE_INFO = 'info'
+    SUBTYPE_STATUS = 'status'
+    SUBTYPE_OUTPUT = 'output'
+    SUBTYPE_PROPERTY = 'property'
 
     @classmethod
     def from_json(cls, json_str: str) -> Self:

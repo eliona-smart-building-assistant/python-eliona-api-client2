@@ -7,7 +7,7 @@ Aggregated data with multiple data points for a periodical raster
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **asset_id** | **int** | ID of the corresponding asset | 
-**subtype** | [**DataSubtype**](DataSubtype.md) |  | [optional] 
+**subtype** | [**DataSubtype**](DataSubtype.md) |  | [optional] [default to DataSubtype.NUMBER_SUBTYPE_INPUT]
 **attribute** | **str** | Name of the attribute which holds the data points | [optional] 
 **timestamp** | **datetime** | Timestamp of this aggregated data set. The timestamp when the timeslot based on raster starts. | [optional] 
 **count** | **float** | Count of data points in this aggregated data set | [optional] 

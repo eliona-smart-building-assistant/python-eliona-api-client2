@@ -27,7 +27,7 @@ class AgentClass(str, Enum):
     """
     allowed enum values
     """
-    IOSYS = 'iosys'
+    AGENT_CLASS_IOSYS = 'iosys'
 
     @classmethod
     def from_json(cls, json_str: str) -> Self:

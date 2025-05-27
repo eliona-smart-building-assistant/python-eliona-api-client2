@@ -221,7 +221,7 @@ class AssetTypeAttribute(BaseModel):
         _obj = cls.model_validate({
             "assetTypeName": obj.get("assetTypeName"),
             "name": obj.get("name"),
-            "subtype": obj.get("subtype"),
+            "subtype": obj.get("subtype") if obj.get("subtype") is not None else DataSubtype.NUMBER_SUBTYPE_INPUT,
             "type": obj.get("type"),
             "enable": obj.get("enable") if obj.get("enable") is not None else False,
             "translation": Translation.from_dict(obj["translation"]) if obj.get("translation") is not None else None,

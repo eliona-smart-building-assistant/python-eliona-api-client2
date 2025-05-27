@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | The id of the rule | [optional] [readonly] 
 **asset_id** | **int** | ID of the corresponding asset | 
-**subtype** | [**DataSubtype**](DataSubtype.md) |  | 
+**subtype** | [**DataSubtype**](DataSubtype.md) |  | [default to DataSubtype.NUMBER_SUBTYPE_INPUT]
 **attribute** | **str** | Name of the attribute of the asset type | 
 **enable** | **bool** | Rule enabled or not | [optional] [default to True]
 **priority** | [**AlarmPriority**](AlarmPriority.md) |  | 

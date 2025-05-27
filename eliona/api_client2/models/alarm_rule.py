@@ -184,7 +184,7 @@ class AlarmRule(BaseModel):
         _obj = cls.model_validate({
             "id": obj.get("id"),
             "assetId": obj.get("assetId"),
-            "subtype": obj.get("subtype"),
+            "subtype": obj.get("subtype") if obj.get("subtype") is not None else DataSubtype.NUMBER_SUBTYPE_INPUT,
             "attribute": obj.get("attribute"),
             "enable": obj.get("enable") if obj.get("enable") is not None else True,
             "priority": obj.get("priority"),

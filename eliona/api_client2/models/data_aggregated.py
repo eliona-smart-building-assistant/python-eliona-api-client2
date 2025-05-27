@@ -158,7 +158,7 @@ class DataAggregated(BaseModel):
         _obj = cls.model_validate({
             "aggregationId": obj.get("aggregationId"),
             "assetId": obj.get("assetId"),
-            "subtype": obj.get("subtype"),
+            "subtype": obj.get("subtype") if obj.get("subtype") is not None else DataSubtype.NUMBER_SUBTYPE_INPUT,
             "attribute": obj.get("attribute"),
             "raster": obj.get("raster"),
             "timestamp": obj.get("timestamp"),

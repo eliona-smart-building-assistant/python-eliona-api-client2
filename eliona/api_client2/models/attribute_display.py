@@ -134,7 +134,7 @@ class AttributeDisplay(BaseModel):
 
         _obj = cls.model_validate({
             "assetId": obj.get("assetId"),
-            "subtype": obj.get("subtype"),
+            "subtype": obj.get("subtype") if obj.get("subtype") is not None else DataSubtype.NUMBER_SUBTYPE_INPUT,
             "attribute": obj.get("attribute"),
             "unit": obj.get("unit"),
             "precision": obj.get("precision"),

@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | ID of the aggregation | [optional] [readonly] 
 **asset_id** | **int** | ID of the corresponding asset | 
-**subtype** | [**DataSubtype**](DataSubtype.md) |  | 
+**subtype** | [**DataSubtype**](DataSubtype.md) |  | [default to DataSubtype.NUMBER_SUBTYPE_INPUT]
 **attribute** | **str** | Name of the attribute which holds the data points | [optional] 
 **mode** | **str** | Calculation mode | 
 **raster** | **str** | calculation interval | [optional] 

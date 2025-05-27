@@ -27,10 +27,10 @@ class AssetIdentifyBy(str, Enum):
     """
     allowed enum values
     """
-    RESOURCEID = 'resourceId'
-    DEVICEID = 'deviceId'
-    ID = 'id'
-    GAI_MINUS_PROJ_ID = 'gai-projId'
+    ASSET_IDENTIFY_BY_RESOURCE_ID = 'resourceId'
+    ASSET_IDENTIFY_BY_DEVICE_ID = 'deviceId'
+    ASSET_IDENTIFY_BY_ID = 'id'
+    ASSET_IDENTIFY_BY_GAI_PROJ_ID = 'gai-projId'
 
     @classmethod
     def from_json(cls, json_str: str) -> Self:

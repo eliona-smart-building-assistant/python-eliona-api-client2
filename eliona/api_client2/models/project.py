@@ -77,9 +77,9 @@ class Project(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in users (list)
         _items = []
         if self.users:
-            for _item in self.users:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_users in self.users:
+                if _item_users:
+                    _items.append(_item_users.to_dict())
             _dict['users'] = _items
         # set to None if id (nullable) is None
         # and model_fields_set contains the field

@@ -808,7 +808,9 @@ Name | Type | Description  | Notes
 
 Create an asset
 
-This process involves creating an asset. The determination if the asset already exists and cannot be created is done by the 'identifyBy' parameter, which specifies the field used for identification. 
+This process involves creating an asset. The determination if the asset already exists and cannot be
+created is done by the 'identifyBy' parameter, which specifies the field used for identification.
+
 
 ### Example
 
@@ -988,7 +990,9 @@ Name | Type | Description  | Notes
 
 Create or update an asset
 
-This process involves creating or updating an asset. The choice between updating or creating is determined by the 'identifyBy' parameter, which specifies the field used for identification. 
+This process involves creating or updating an asset. The choice between updating or creating is determined
+by the 'identifyBy' parameter, which specifies the field used for identification.
+
 
 ### Example
 
@@ -1078,7 +1082,8 @@ Name | Type | Description  | Notes
 
 Update an asset
 
-Deprecated: use the 'PUT /asset' method and optionally the 'identifyBy' parameter to update a specific asset. 
+Deprecated: use the 'PUT /asset' method and optionally the 'identifyBy' parameter to update a specific asset.
+
 
 ### Example
 

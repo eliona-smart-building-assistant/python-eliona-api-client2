@@ -111,7 +111,9 @@ Name | Type | Description  | Notes
 
 Get aggregated data
 
-Deprecated: Use the 'GET /data-trend-aggregated' endpoint to retrieve aggregated data for periodic rasters without defining aggregations. Gets aggregated data sets which combines a set of data points for a defined periodical raster. 
+Deprecated: Use the 'GET /data-trend-aggregated' endpoint to retrieve aggregated data for periodic rasters without defining aggregations.
+Gets aggregated data sets which combines a set of data points for a defined periodical raster.
+
 
 ### Example
 
@@ -406,7 +408,9 @@ Name | Type | Description  | Notes
 
 Get trend of historical data
 
-Deprecated: Use 'GET /data-trend/{asset-id}' instead. Gets trend information about historical data for assets. 
+Deprecated: Use 'GET /data-trend/{asset-id}' instead.
+Gets trend information about historical data for assets.
+
 
 ### Example
 
@@ -756,7 +760,9 @@ void (empty response body)
 
 Create or update historical data
 
-This creates or updates historical data. The choice between updating or creating depends on whether the historical  data for assetId, subtype, parameter and timestamp already exists. 
+This creates or updates historical data. The choice between updating or creating depends on whether the historical 
+data for assetId, subtype, parameter and timestamp already exists.
+
 
 ### Example
 

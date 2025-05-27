@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | The id of the rule | [optional] [readonly] 
 **asset_id** | **int** | ID of the corresponding asset | 
-**subtype** | [**DataSubtype**](DataSubtype.md) |  | 
+**subtype** | [**DataSubtype**](DataSubtype.md) |  | [default to DataSubtype.NUMBER_SUBTYPE_INPUT]
 **attribute** | **str** | Name of the attribute of the asset type to be calculated | 
 **virtual** | **bool** | Is the calculation attribute virtual or not | [optional] 
 **formula** | **str** | calculation rule to calculate the value for the attribute | [optional] 

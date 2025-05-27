@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **aggregation_id** | **int** | ID of the aggregation | [optional] 
 **asset_id** | **int** | ID of the corresponding asset | 
-**subtype** | [**DataSubtype**](DataSubtype.md) |  | 
+**subtype** | [**DataSubtype**](DataSubtype.md) |  | [default to DataSubtype.NUMBER_SUBTYPE_INPUT]
 **attribute** | **str** | Name of the attribute which holds the data points | [optional] 
 **raster** | **str** | Calculation intervals. | 
 **timestamp** | **datetime** | Timestamp of this aggregated data set. The timestamp when the timeslot based on raster starts. | [optional] 

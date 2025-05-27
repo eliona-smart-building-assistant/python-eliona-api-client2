@@ -7,7 +7,7 @@ Data for assets
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **asset_id** | **int** | ID of the corresponding asset | 
-**subtype** | [**DataSubtype**](DataSubtype.md) |  | 
+**subtype** | [**DataSubtype**](DataSubtype.md) |  | [default to DataSubtype.NUMBER_SUBTYPE_INPUT]
 **timestamp** | **datetime** | Timestamp of the latest data change | [optional] 
 **data** | **object** | Asset payload | 
 **asset_type_name** | **str** | The name of the corresponding asset type | [optional] [readonly] 
