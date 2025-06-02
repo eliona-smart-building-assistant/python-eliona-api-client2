@@ -5,13 +5,16 @@ All URIs are relative to *https://name.eliona.io/v2*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**delete_asset_type_by_name**](AssetTypesApi.md#delete_asset_type_by_name) | **DELETE** /asset-types/{asset-type-name} | Delete an asset type
+[**delete_asset_type_category_by_name**](AssetTypesApi.md#delete_asset_type_category_by_name) | **DELETE** /asset-type-categories/{asset-type-category-name} | Delete an asset type category
 [**get_asset_type_by_name**](AssetTypesApi.md#get_asset_type_by_name) | **GET** /asset-types/{asset-type-name} | Information about an asset type
+[**get_asset_type_categories**](AssetTypesApi.md#get_asset_type_categories) | **GET** /asset-type-categories | List of asset type categories
 [**get_asset_types**](AssetTypesApi.md#get_asset_types) | **GET** /asset-types | List of asset types
 [**post_asset_type**](AssetTypesApi.md#post_asset_type) | **POST** /asset-types | Create an asset type
 [**post_asset_type_attribute**](AssetTypesApi.md#post_asset_type_attribute) | **POST** /asset-types/{asset-type-name}/attributes | Create asset type attribute
 [**put_asset_type**](AssetTypesApi.md#put_asset_type) | **PUT** /asset-types | Create or update an asset type
 [**put_asset_type_attribute**](AssetTypesApi.md#put_asset_type_attribute) | **PUT** /asset-types/{asset-type-name}/attributes | Create or update an asset type attribute
 [**put_asset_type_by_name**](AssetTypesApi.md#put_asset_type_by_name) | **PUT** /asset-types/{asset-type-name} | Update an asset type
+[**put_asset_type_category**](AssetTypesApi.md#put_asset_type_category) | **PUT** /asset-type-categories | Create or update an asset type categories
 
 
 # **delete_asset_type_by_name**
@@ -94,6 +97,89 @@ void (empty response body)
 |-------------|-------------|------------------|
 **204** | Successfully deleted the asset type |  -  |
 **404** | Asset type with name not found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_asset_type_category_by_name**
+> delete_asset_type_category_by_name(asset_type_category_name)
+
+Delete an asset type category
+
+Deletes an asset type category
+
+### Example
+
+* Api Key Authentication (ApiKeyAuth):
+* Bearer (JWT) Authentication (BearerAuth):
+
+```python
+import eliona.api_client2
+from eliona.api_client2.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://name.eliona.io/v2
+# See configuration.py for a list of all supported configuration parameters.
+configuration = eliona.api_client2.Configuration(
+    host = "https://name.eliona.io/v2"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+
+# Configure Bearer authorization (JWT): BearerAuth
+configuration = eliona.api_client2.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with eliona.api_client2.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = eliona.api_client2.AssetTypesApi(api_client)
+    asset_type_category_name = 'location' # str | The name of the asset type category
+
+    try:
+        # Delete an asset type category
+        api_instance.delete_asset_type_category_by_name(asset_type_category_name)
+    except Exception as e:
+        print("Exception when calling AssetTypesApi->delete_asset_type_category_by_name: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **asset_type_category_name** | **str**| The name of the asset type category | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth), [BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** | Successfully deleted the asset type category |  -  |
+**404** | Asset type category with name not found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -182,6 +268,87 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 **200** | Successfully returned an asset type by name. |  -  |
 **404** | Asset type with name not found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_asset_type_categories**
+> List[AssetTypeCategory] get_asset_type_categories()
+
+List of asset type categories
+
+Returns a list of asset type categories
+
+### Example
+
+* Api Key Authentication (ApiKeyAuth):
+* Bearer (JWT) Authentication (BearerAuth):
+
+```python
+import eliona.api_client2
+from eliona.api_client2.models.asset_type_category import AssetTypeCategory
+from eliona.api_client2.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://name.eliona.io/v2
+# See configuration.py for a list of all supported configuration parameters.
+configuration = eliona.api_client2.Configuration(
+    host = "https://name.eliona.io/v2"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+
+# Configure Bearer authorization (JWT): BearerAuth
+configuration = eliona.api_client2.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with eliona.api_client2.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = eliona.api_client2.AssetTypesApi(api_client)
+
+    try:
+        # List of asset type categories
+        api_response = api_instance.get_asset_type_categories()
+        print("The response of AssetTypesApi->get_asset_type_categories:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling AssetTypesApi->get_asset_type_categories: %s\n" % e)
+```
+
+
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List[AssetTypeCategory]**](AssetTypeCategory.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth), [BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successfully returned a list of asset type categories |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -707,6 +874,91 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 **200** | Successfully updated an existing asset type |  -  |
 **404** | Asset type with name not found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **put_asset_type_category**
+> AssetTypeCategory put_asset_type_category(asset_type_category)
+
+Create or update an asset type categories
+
+Create a new asset type categories or update an asset type categories if already exists. Uses the unique name for updating.
+
+### Example
+
+* Api Key Authentication (ApiKeyAuth):
+* Bearer (JWT) Authentication (BearerAuth):
+
+```python
+import eliona.api_client2
+from eliona.api_client2.models.asset_type_category import AssetTypeCategory
+from eliona.api_client2.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://name.eliona.io/v2
+# See configuration.py for a list of all supported configuration parameters.
+configuration = eliona.api_client2.Configuration(
+    host = "https://name.eliona.io/v2"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+
+# Configure Bearer authorization (JWT): BearerAuth
+configuration = eliona.api_client2.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with eliona.api_client2.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = eliona.api_client2.AssetTypesApi(api_client)
+    asset_type_category = eliona.api_client2.AssetTypeCategory() # AssetTypeCategory | 
+
+    try:
+        # Create or update an asset type categories
+        api_response = api_instance.put_asset_type_category(asset_type_category)
+        print("The response of AssetTypesApi->put_asset_type_category:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling AssetTypesApi->put_asset_type_category: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **asset_type_category** | [**AssetTypeCategory**](AssetTypeCategory.md)|  | 
+
+### Return type
+
+[**AssetTypeCategory**](AssetTypeCategory.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth), [BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successfully created a new or updated an existing asset type category |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

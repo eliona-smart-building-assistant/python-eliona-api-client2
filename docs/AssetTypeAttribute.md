@@ -28,6 +28,7 @@ Name | Type | Description | Notes
 **map** | **List[object]** | list of mapping between value and custom text | [optional] 
 **source_path** | **List[str]** | source path for attribute value | [optional] 
 **is_digital** | **bool** | is attribute digital | [optional] 
+**category_name** | **str** | a reference to a asset type category | [optional] 
 
 ## Example
 
