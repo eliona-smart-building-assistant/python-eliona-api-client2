@@ -10,7 +10,6 @@ Method | HTTP request | Description
 [**get_projects**](ProjectsApi.md#get_projects) | **GET** /projects | Information about projects
 [**put_project**](ProjectsApi.md#put_project) | **PUT** /projects | Create or update a project
 [**put_project_role**](ProjectsApi.md#put_project_role) | **PUT** /project-roles | Create or update a project role
-[**stream_project_roles**](ProjectsApi.md#stream_project_roles) | **GET** /project-roles-stream | Information about project roles as stream
 
 
 # **get_project_by_id**
@@ -343,7 +342,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json, application/x-ndjson
 
 ### HTTP response details
 
@@ -522,87 +521,6 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Successfully created or updated the project role |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **stream_project_roles**
-> ProjectRole stream_project_roles()
-
-Information about project roles as stream
-
-Retrieves a list of roles that can be assigned to users within projects
-
-### Example
-
-* Api Key Authentication (ApiKeyAuth):
-* Bearer (JWT) Authentication (BearerAuth):
-
-```python
-import eliona.api_client2
-from eliona.api_client2.models.project_role import ProjectRole
-from eliona.api_client2.rest import ApiException
-from pprint import pprint
-
-# Defining the host is optional and defaults to https://name.eliona.io/v2
-# See configuration.py for a list of all supported configuration parameters.
-configuration = eliona.api_client2.Configuration(
-    host = "https://name.eliona.io/v2"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: ApiKeyAuth
-configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
-
-# Configure Bearer authorization (JWT): BearerAuth
-configuration = eliona.api_client2.Configuration(
-    access_token = os.environ["BEARER_TOKEN"]
-)
-
-# Enter a context with an instance of the API client
-with eliona.api_client2.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = eliona.api_client2.ProjectsApi(api_client)
-
-    try:
-        # Information about project roles as stream
-        api_response = api_instance.stream_project_roles()
-        print("The response of ProjectsApi->stream_project_roles:\n")
-        pprint(api_response)
-    except Exception as e:
-        print("Exception when calling ProjectsApi->stream_project_roles: %s\n" % e)
-```
-
-
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-[**ProjectRole**](ProjectRole.md)
-
-### Authorization
-
-[ApiKeyAuth](../README.md#ApiKeyAuth), [BearerAuth](../README.md#BearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/x-ndjson
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Successfully starting stream of project roles |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
