@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 
 # **get_data**
-> List[Data] get_data(asset_id=asset_id, parent_asset_id=parent_asset_id, data_subtype=data_subtype, asset_type_name=asset_type_name)
+> List[Data] get_data(asset_id=asset_id, parent_asset_id=parent_asset_id, data_subtype=data_subtype, asset_type_name=asset_type_name, offset=offset, size=size)
 
 Gets all data
 
@@ -63,10 +63,12 @@ with eliona.api_client2.ApiClient(configuration) as api_client:
     parent_asset_id = 4711 # int | Filter for a specific parent asset id (optional)
     data_subtype = 'input' # str | Filter for a specific type of asset data (optional)
     asset_type_name = 'weather_location' # str | Filter the name of the asset type (optional)
+    offset = 3 # int | Specifies the starting point for pagination by indicating the number of items to skip.  (optional)
+    size = 10 # int | Specifies the number of items per page for pagination.  (optional)
 
     try:
         # Gets all data
-        api_response = api_instance.get_data(asset_id=asset_id, parent_asset_id=parent_asset_id, data_subtype=data_subtype, asset_type_name=asset_type_name)
+        api_response = api_instance.get_data(asset_id=asset_id, parent_asset_id=parent_asset_id, data_subtype=data_subtype, asset_type_name=asset_type_name, offset=offset, size=size)
         print("The response of DataApi->get_data:\n")
         pprint(api_response)
     except Exception as e:
@@ -84,6 +86,8 @@ Name | Type | Description  | Notes
  **parent_asset_id** | **int**| Filter for a specific parent asset id | [optional] 
  **data_subtype** | **str**| Filter for a specific type of asset data | [optional] 
  **asset_type_name** | **str**| Filter the name of the asset type | [optional] 
+ **offset** | **int**| Specifies the starting point for pagination by indicating the number of items to skip.  | [optional] 
+ **size** | **int**| Specifies the number of items per page for pagination.  | [optional] 
 
 ### Return type
 
@@ -296,7 +300,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, application/x-ndjson
+ - **Accept**: application/json
 
 ### HTTP response details
 
@@ -307,7 +311,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_data_trend_by_id**
-> List[Data] get_data_trend_by_id(asset_id, data_subtype, attribute_name, from_date, to_date, offset=offset, size=size)
+> List[Data] get_data_trend_by_id(asset_id, data_subtype=data_subtype, attribute_name=attribute_name, from_date=from_date, to_date=to_date, offset=offset, size=size)
 
 Get trend of historical data
 
@@ -351,16 +355,16 @@ with eliona.api_client2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = eliona.api_client2.DataApi(api_client)
     asset_id = 4711 # int | The id of the asset
-    data_subtype = 'input' # str | Type of asset data
-    attribute_name = 'temperature' # str | Data attribute name
-    from_date = '2020-01-01T09:00:00.000Z' # str | Lower date time (RFC3339) limit inclusive
-    to_date = '2021-12-31T23:00:00.000Z' # str | Upper date time (RFC3339) limit inclusive
+    data_subtype = 'input' # str | Filter for a specific type of asset data (optional)
+    attribute_name = 'temperature' # str | Data attribute name (optional)
+    from_date = '2020-01-01T09:00:00.000Z' # str | Filter by lower date time (RFC3339) limit inclusive (optional)
+    to_date = '2021-12-31T23:00:00.000Z' # str | Filter by upper date time (RFC3339) limit exclusive (optional)
     offset = 3 # int | Specifies the starting point for pagination by indicating the number of items to skip.  (optional)
     size = 10 # int | Specifies the number of items per page for pagination.  (optional)
 
     try:
         # Get trend of historical data
-        api_response = api_instance.get_data_trend_by_id(asset_id, data_subtype, attribute_name, from_date, to_date, offset=offset, size=size)
+        api_response = api_instance.get_data_trend_by_id(asset_id, data_subtype=data_subtype, attribute_name=attribute_name, from_date=from_date, to_date=to_date, offset=offset, size=size)
         print("The response of DataApi->get_data_trend_by_id:\n")
         pprint(api_response)
     except Exception as e:
@@ -375,10 +379,10 @@ with eliona.api_client2.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **asset_id** | **int**| The id of the asset | 
- **data_subtype** | **str**| Type of asset data | 
- **attribute_name** | **str**| Data attribute name | 
- **from_date** | **str**| Lower date time (RFC3339) limit inclusive | 
- **to_date** | **str**| Upper date time (RFC3339) limit inclusive | 
+ **data_subtype** | **str**| Filter for a specific type of asset data | [optional] 
+ **attribute_name** | **str**| Data attribute name | [optional] 
+ **from_date** | **str**| Filter by lower date time (RFC3339) limit inclusive | [optional] 
+ **to_date** | **str**| Filter by upper date time (RFC3339) limit exclusive | [optional] 
  **offset** | **int**| Specifies the starting point for pagination by indicating the number of items to skip.  | [optional] 
  **size** | **int**| Specifies the number of items per page for pagination.  | [optional] 
 
@@ -393,7 +397,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json, application/x-ndjson
 
 ### HTTP response details
 
@@ -488,7 +492,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, application/x-ndjson
+ - **Accept**: application/json
 
 ### HTTP response details
 

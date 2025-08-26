@@ -181,7 +181,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_calculation_rules**
-> List[CalculationRule] get_calculation_rules(calculation_rule_ids=calculation_rule_ids)
+> List[CalculationRule] get_calculation_rules(calculation_rule_ids=calculation_rule_ids, offset=offset, size=size)
 
 Information about calculation rules
 
@@ -225,10 +225,12 @@ with eliona.api_client2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = eliona.api_client2.CalculationRulesApi(api_client)
     calculation_rule_ids = [56] # List[int] | List of calculation rule ids for filtering (optional)
+    offset = 3 # int | Specifies the starting point for pagination by indicating the number of items to skip.  (optional)
+    size = 10 # int | Specifies the number of items per page for pagination.  (optional)
 
     try:
         # Information about calculation rules
-        api_response = api_instance.get_calculation_rules(calculation_rule_ids=calculation_rule_ids)
+        api_response = api_instance.get_calculation_rules(calculation_rule_ids=calculation_rule_ids, offset=offset, size=size)
         print("The response of CalculationRulesApi->get_calculation_rules:\n")
         pprint(api_response)
     except Exception as e:
@@ -243,6 +245,8 @@ with eliona.api_client2.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **calculation_rule_ids** | [**List[int]**](int.md)| List of calculation rule ids for filtering | [optional] 
+ **offset** | **int**| Specifies the starting point for pagination by indicating the number of items to skip.  | [optional] 
+ **size** | **int**| Specifies the number of items per page for pagination.  | [optional] 
 
 ### Return type
 

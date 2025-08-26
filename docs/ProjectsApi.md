@@ -187,7 +187,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_project_roles**
-> List[ProjectRole] get_project_roles()
+> List[ProjectRole] get_project_roles(offset=offset, size=size)
 
 Information about project roles
 
@@ -230,10 +230,12 @@ configuration = eliona.api_client2.Configuration(
 with eliona.api_client2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = eliona.api_client2.ProjectsApi(api_client)
+    offset = 3 # int | Specifies the starting point for pagination by indicating the number of items to skip.  (optional)
+    size = 10 # int | Specifies the number of items per page for pagination.  (optional)
 
     try:
         # Information about project roles
-        api_response = api_instance.get_project_roles()
+        api_response = api_instance.get_project_roles(offset=offset, size=size)
         print("The response of ProjectsApi->get_project_roles:\n")
         pprint(api_response)
     except Exception as e:
@@ -244,7 +246,11 @@ with eliona.api_client2.ApiClient(configuration) as api_client:
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **offset** | **int**| Specifies the starting point for pagination by indicating the number of items to skip.  | [optional] 
+ **size** | **int**| Specifies the number of items per page for pagination.  | [optional] 
 
 ### Return type
 
@@ -268,7 +274,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_projects**
-> List[Project] get_projects(expansions=expansions)
+> List[Project] get_projects(offset=offset, size=size, expansions=expansions)
 
 Information about projects
 
@@ -311,11 +317,13 @@ configuration = eliona.api_client2.Configuration(
 with eliona.api_client2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = eliona.api_client2.ProjectsApi(api_client)
+    offset = 3 # int | Specifies the starting point for pagination by indicating the number of items to skip.  (optional)
+    size = 10 # int | Specifies the number of items per page for pagination.  (optional)
     expansions = ['expansions_example'] # List[str] | List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows 'ObjectName.fieldName'. (optional)
 
     try:
         # Information about projects
-        api_response = api_instance.get_projects(expansions=expansions)
+        api_response = api_instance.get_projects(offset=offset, size=size, expansions=expansions)
         print("The response of ProjectsApi->get_projects:\n")
         pprint(api_response)
     except Exception as e:
@@ -329,6 +337,8 @@ with eliona.api_client2.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **offset** | **int**| Specifies the starting point for pagination by indicating the number of items to skip.  | [optional] 
+ **size** | **int**| Specifies the number of items per page for pagination.  | [optional] 
  **expansions** | [**List[str]**](str.md)| List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows &#39;ObjectName.fieldName&#39;. | [optional] 
 
 ### Return type

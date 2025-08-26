@@ -272,7 +272,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_asset_type_categories**
-> List[AssetTypeCategory] get_asset_type_categories()
+> List[AssetTypeCategory] get_asset_type_categories(offset=offset, size=size)
 
 List of asset type categories
 
@@ -315,10 +315,12 @@ configuration = eliona.api_client2.Configuration(
 with eliona.api_client2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = eliona.api_client2.AssetTypesApi(api_client)
+    offset = 3 # int | Specifies the starting point for pagination by indicating the number of items to skip.  (optional)
+    size = 10 # int | Specifies the number of items per page for pagination.  (optional)
 
     try:
         # List of asset type categories
-        api_response = api_instance.get_asset_type_categories()
+        api_response = api_instance.get_asset_type_categories(offset=offset, size=size)
         print("The response of AssetTypesApi->get_asset_type_categories:\n")
         pprint(api_response)
     except Exception as e:
@@ -329,7 +331,11 @@ with eliona.api_client2.ApiClient(configuration) as api_client:
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **offset** | **int**| Specifies the starting point for pagination by indicating the number of items to skip.  | [optional] 
+ **size** | **int**| Specifies the number of items per page for pagination.  | [optional] 
 
 ### Return type
 
@@ -353,7 +359,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_asset_types**
-> List[AssetType] get_asset_types(expansions=expansions)
+> List[AssetType] get_asset_types(offset=offset, size=size, expansions=expansions)
 
 List of asset types
 
@@ -396,11 +402,13 @@ configuration = eliona.api_client2.Configuration(
 with eliona.api_client2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = eliona.api_client2.AssetTypesApi(api_client)
+    offset = 3 # int | Specifies the starting point for pagination by indicating the number of items to skip.  (optional)
+    size = 10 # int | Specifies the number of items per page for pagination.  (optional)
     expansions = ['expansions_example'] # List[str] | List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows 'ObjectName.fieldName'. (optional)
 
     try:
         # List of asset types
-        api_response = api_instance.get_asset_types(expansions=expansions)
+        api_response = api_instance.get_asset_types(offset=offset, size=size, expansions=expansions)
         print("The response of AssetTypesApi->get_asset_types:\n")
         pprint(api_response)
     except Exception as e:
@@ -414,6 +422,8 @@ with eliona.api_client2.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **offset** | **int**| Specifies the starting point for pagination by indicating the number of items to skip.  | [optional] 
+ **size** | **int**| Specifies the number of items per page for pagination.  | [optional] 
  **expansions** | [**List[str]**](str.md)| List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows &#39;ObjectName.fieldName&#39;. | [optional] 
 
 ### Return type

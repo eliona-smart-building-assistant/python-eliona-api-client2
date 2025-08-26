@@ -184,7 +184,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_alarm_rules**
-> List[AlarmRule] get_alarm_rules(alarm_rule_ids=alarm_rule_ids, asset_id=asset_id, expansions=expansions)
+> List[AlarmRule] get_alarm_rules(alarm_rule_ids=alarm_rule_ids, asset_id=asset_id, offset=offset, size=size, expansions=expansions)
 
 Information about alarm rules
 
@@ -229,11 +229,13 @@ with eliona.api_client2.ApiClient(configuration) as api_client:
     api_instance = eliona.api_client2.AlarmRulesApi(api_client)
     alarm_rule_ids = [56] # List[int] | List of alarm rule ids for filtering (optional)
     asset_id = 4711 # int | Filter for a specific asset id (optional)
+    offset = 3 # int | Specifies the starting point for pagination by indicating the number of items to skip.  (optional)
+    size = 10 # int | Specifies the number of items per page for pagination.  (optional)
     expansions = ['expansions_example'] # List[str] | List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows 'ObjectName.fieldName'. (optional)
 
     try:
         # Information about alarm rules
-        api_response = api_instance.get_alarm_rules(alarm_rule_ids=alarm_rule_ids, asset_id=asset_id, expansions=expansions)
+        api_response = api_instance.get_alarm_rules(alarm_rule_ids=alarm_rule_ids, asset_id=asset_id, offset=offset, size=size, expansions=expansions)
         print("The response of AlarmRulesApi->get_alarm_rules:\n")
         pprint(api_response)
     except Exception as e:
@@ -249,6 +251,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **alarm_rule_ids** | [**List[int]**](int.md)| List of alarm rule ids for filtering | [optional] 
  **asset_id** | **int**| Filter for a specific asset id | [optional] 
+ **offset** | **int**| Specifies the starting point for pagination by indicating the number of items to skip.  | [optional] 
+ **size** | **int**| Specifies the number of items per page for pagination.  | [optional] 
  **expansions** | [**List[str]**](str.md)| List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows &#39;ObjectName.fieldName&#39;. | [optional] 
 
 ### Return type

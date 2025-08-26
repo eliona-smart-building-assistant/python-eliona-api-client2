@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**rule_id** | **int** | The id of the corresponding rule | [readonly] 
+**rule_id** | **int** | The id of the corresponding rule | 
 **asset_id** | **int** | ID of the corresponding asset | [optional] [readonly] 
 **subtype** | **str** | Type of asset data | [optional] [readonly] 
 **attribute** | **str** | Name of the attribute of the asset type | [optional] [readonly] 

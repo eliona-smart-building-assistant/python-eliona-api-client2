@@ -549,7 +549,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_assets**
-> List[Asset] get_assets(asset_type_name=asset_type_name, project_id=project_id, expansions=expansions)
+> List[Asset] get_assets(asset_type_name=asset_type_name, project_id=project_id, offset=offset, size=size, expansions=expansions)
 
 Information about assets
 
@@ -594,11 +594,13 @@ with eliona.api_client2.ApiClient(configuration) as api_client:
     api_instance = eliona.api_client2.AssetsApi(api_client)
     asset_type_name = 'weather_location' # str | Filter the name of the asset type (optional)
     project_id = 'project_id_example' # str | Filter for a specific project (optional)
+    offset = 3 # int | Specifies the starting point for pagination by indicating the number of items to skip.  (optional)
+    size = 10 # int | Specifies the number of items per page for pagination.  (optional)
     expansions = ['expansions_example'] # List[str] | List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows 'ObjectName.fieldName'. (optional)
 
     try:
         # Information about assets
-        api_response = api_instance.get_assets(asset_type_name=asset_type_name, project_id=project_id, expansions=expansions)
+        api_response = api_instance.get_assets(asset_type_name=asset_type_name, project_id=project_id, offset=offset, size=size, expansions=expansions)
         print("The response of AssetsApi->get_assets:\n")
         pprint(api_response)
     except Exception as e:
@@ -614,6 +616,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **asset_type_name** | **str**| Filter the name of the asset type | [optional] 
  **project_id** | **str**| Filter for a specific project | [optional] 
+ **offset** | **int**| Specifies the starting point for pagination by indicating the number of items to skip.  | [optional] 
+ **size** | **int**| Specifies the number of items per page for pagination.  | [optional] 
  **expansions** | [**List[str]**](str.md)| List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows &#39;ObjectName.fieldName&#39;. | [optional] 
 
 ### Return type
@@ -638,7 +642,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_attribute_display**
-> AttributeDisplay get_attribute_display()
+> List[AttributeDisplay] get_attribute_display(offset=offset, size=size)
 
 How attributes are displayed
 
@@ -681,10 +685,12 @@ configuration = eliona.api_client2.Configuration(
 with eliona.api_client2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = eliona.api_client2.AssetsApi(api_client)
+    offset = 3 # int | Specifies the starting point for pagination by indicating the number of items to skip.  (optional)
+    size = 10 # int | Specifies the number of items per page for pagination.  (optional)
 
     try:
         # How attributes are displayed
-        api_response = api_instance.get_attribute_display()
+        api_response = api_instance.get_attribute_display(offset=offset, size=size)
         print("The response of AssetsApi->get_attribute_display:\n")
         pprint(api_response)
     except Exception as e:
@@ -695,11 +701,15 @@ with eliona.api_client2.ApiClient(configuration) as api_client:
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **offset** | **int**| Specifies the starting point for pagination by indicating the number of items to skip.  | [optional] 
+ **size** | **int**| Specifies the number of items per page for pagination.  | [optional] 
 
 ### Return type
 
-[**AttributeDisplay**](AttributeDisplay.md)
+[**List[AttributeDisplay]**](AttributeDisplay.md)
 
 ### Authorization
 

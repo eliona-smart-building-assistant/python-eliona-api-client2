@@ -96,7 +96,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_tags**
-> List[Tag] get_tags()
+> List[Tag] get_tags(offset=offset, size=size)
 
 Information about tags
 
@@ -139,10 +139,12 @@ configuration = eliona.api_client2.Configuration(
 with eliona.api_client2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = eliona.api_client2.TagsApi(api_client)
+    offset = 3 # int | Specifies the starting point for pagination by indicating the number of items to skip.  (optional)
+    size = 10 # int | Specifies the number of items per page for pagination.  (optional)
 
     try:
         # Information about tags
-        api_response = api_instance.get_tags()
+        api_response = api_instance.get_tags(offset=offset, size=size)
         print("The response of TagsApi->get_tags:\n")
         pprint(api_response)
     except Exception as e:
@@ -153,7 +155,11 @@ with eliona.api_client2.ApiClient(configuration) as api_client:
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **offset** | **int**| Specifies the starting point for pagination by indicating the number of items to skip.  | [optional] 
+ **size** | **int**| Specifies the number of items per page for pagination.  | [optional] 
 
 ### Return type
 
