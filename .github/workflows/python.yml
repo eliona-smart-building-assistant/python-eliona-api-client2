@@ -7,6 +7,9 @@ name: eliona.api_client2 Python package
 
 on: [push, pull_request]
 
+permissions:
+  contents: read
+
 jobs:
   build:
 
