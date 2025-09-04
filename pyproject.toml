@@ -5,7 +5,7 @@ description = "Eliona REST API"
 authors = [
   {name = "Eliona by IoTEC AG",email = "hello@eliona.io"},
 ]
-license = "MIT License"
+license = "MIT"
 readme = "README.md"
 keywords = ["OpenAPI", "OpenAPI-Generator", "Eliona REST API"]
 requires-python = ">=3.9"
