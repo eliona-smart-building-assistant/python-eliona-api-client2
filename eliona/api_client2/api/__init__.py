@@ -17,6 +17,7 @@ if __import__("typing").TYPE_CHECKING:
     from eliona.api_client2.api.projects_api import ProjectsApi
     from eliona.api_client2.api.qr_codes_api import QRCodesApi
     from eliona.api_client2.api.tags_api import TagsApi
+    from eliona.api_client2.api.tickets_api import TicketsApi
     from eliona.api_client2.api.users_api import UsersApi
     from eliona.api_client2.api.version_api import VersionApi
     from eliona.api_client2.api.widgets_api import WidgetsApi
@@ -44,6 +45,7 @@ from eliona.api_client2.api.nodes_api import NodesApi
 from eliona.api_client2.api.projects_api import ProjectsApi
 from eliona.api_client2.api.qr_codes_api import QRCodesApi
 from eliona.api_client2.api.tags_api import TagsApi
+from eliona.api_client2.api.tickets_api import TicketsApi
 from eliona.api_client2.api.users_api import UsersApi
 from eliona.api_client2.api.version_api import VersionApi
 from eliona.api_client2.api.widgets_api import WidgetsApi

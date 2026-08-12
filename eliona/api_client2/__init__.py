@@ -5,7 +5,7 @@
 """
     Eliona REST API
 
-    The Eliona REST API provides unified access to the resources and data within an Eliona environment.<br> <br> This documentation corresponds to Eliona release 14.2. For previous Eliona releases, please refer to the matching REST API version below:<br> <br> Eliona v14.2: [2.9.4](https://api.eliona.io/?https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/refs/tags/v2.9.4/openapi.yaml)<br> Eliona v14.1: [2.9.4](https://api.eliona.io/?https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/refs/tags/v2.9.4/openapi.yaml)<br> Eliona v14.0: [2.8.7](https://api.eliona.io/?https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/refs/tags/v2.8.7/openapi.yaml)<br> Eliona v13.2: [2.7.0](https://api.eliona.io/?https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/refs/tags/v2.7.0/openapi.yaml)<br> Eliona v13.1: [2.6.12](https://api.eliona.io/?https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/refs/tags/v2.6.12/openapi.yaml)<br> Eliona v13.0: [2.6.12](https://api.eliona.io/?https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/refs/tags/v2.6.12/openapi.yaml)<br> Eliona v12.1: [2.6.1](https://api.eliona.io/?https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/refs/tags/v2.6.1/openapi.yaml)<br> Eliona v12.0: [2.6.1](https://api.eliona.io/?https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/refs/tags/v2.6.1/openapi.yaml)<br> [Preview Beta](https://api.eliona.io/?https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/refs/heads/develop/openapi.yaml)<br> 
+    The Eliona REST API provides unified access to the resources and data within an Eliona environment.<br> <br> This documentation corresponds to Eliona release 14.2. For previous Eliona releases, please refer to the matching REST API version below:<br> <br> Eliona v14.2: [2.10.5](https://api.eliona.io/?https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/refs/tags/v2.10.5/openapi.yaml)<br> Eliona v14.1: [2.9.4](https://api.eliona.io/?https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/refs/tags/v2.9.4/openapi.yaml)<br> Eliona v14.0: [2.8.7](https://api.eliona.io/?https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/refs/tags/v2.8.7/openapi.yaml)<br> Eliona v13.2: [2.7.0](https://api.eliona.io/?https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/refs/tags/v2.7.0/openapi.yaml)<br> Eliona v13.1: [2.6.12](https://api.eliona.io/?https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/refs/tags/v2.6.12/openapi.yaml)<br> Eliona v13.0: [2.6.12](https://api.eliona.io/?https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/refs/tags/v2.6.12/openapi.yaml)<br> Eliona v12.1: [2.6.1](https://api.eliona.io/?https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/refs/tags/v2.6.1/openapi.yaml)<br> Eliona v12.0: [2.6.1](https://api.eliona.io/?https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/refs/tags/v2.6.1/openapi.yaml)<br> [Preview Beta](https://api.eliona.io/?https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/refs/heads/develop/openapi.yaml)<br> 
 
     The version of the OpenAPI document: 2.9.6
     Contact: hello@eliona.io
@@ -34,6 +34,7 @@ __all__ = [
     "ProjectsApi",
     "QRCodesApi",
     "TagsApi",
+    "TicketsApi",
     "UsersApi",
     "VersionApi",
     "WidgetsApi",
@@ -86,6 +87,7 @@ __all__ = [
     "ProjectRole",
     "ProjectUser",
     "Tag",
+    "Ticket",
     "Translation",
     "User",
     "Widget",
@@ -111,6 +113,7 @@ if __import__("typing").TYPE_CHECKING:
     from eliona.api_client2.api.projects_api import ProjectsApi as ProjectsApi
     from eliona.api_client2.api.qr_codes_api import QRCodesApi as QRCodesApi
     from eliona.api_client2.api.tags_api import TagsApi as TagsApi
+    from eliona.api_client2.api.tickets_api import TicketsApi as TicketsApi
     from eliona.api_client2.api.users_api import UsersApi as UsersApi
     from eliona.api_client2.api.version_api import VersionApi as VersionApi
     from eliona.api_client2.api.widgets_api import WidgetsApi as WidgetsApi
@@ -167,6 +170,7 @@ if __import__("typing").TYPE_CHECKING:
     from eliona.api_client2.models.project_role import ProjectRole as ProjectRole
     from eliona.api_client2.models.project_user import ProjectUser as ProjectUser
     from eliona.api_client2.models.tag import Tag as Tag
+    from eliona.api_client2.models.ticket import Ticket as Ticket
     from eliona.api_client2.models.translation import Translation as Translation
     from eliona.api_client2.models.user import User as User
     from eliona.api_client2.models.widget import Widget as Widget
@@ -198,6 +202,7 @@ from eliona.api_client2.api.nodes_api import NodesApi as NodesApi
 from eliona.api_client2.api.projects_api import ProjectsApi as ProjectsApi
 from eliona.api_client2.api.qr_codes_api import QRCodesApi as QRCodesApi
 from eliona.api_client2.api.tags_api import TagsApi as TagsApi
+from eliona.api_client2.api.tickets_api import TicketsApi as TicketsApi
 from eliona.api_client2.api.users_api import UsersApi as UsersApi
 from eliona.api_client2.api.version_api import VersionApi as VersionApi
 from eliona.api_client2.api.widgets_api import WidgetsApi as WidgetsApi
@@ -254,6 +259,7 @@ from eliona.api_client2.models.project import Project as Project
 from eliona.api_client2.models.project_role import ProjectRole as ProjectRole
 from eliona.api_client2.models.project_user import ProjectUser as ProjectUser
 from eliona.api_client2.models.tag import Tag as Tag
+from eliona.api_client2.models.ticket import Ticket as Ticket
 from eliona.api_client2.models.translation import Translation as Translation
 from eliona.api_client2.models.user import User as User
 from eliona.api_client2.models.widget import Widget as Widget
